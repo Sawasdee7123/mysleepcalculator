@@ -23,9 +23,7 @@ Accede a la calculadora en: [https://calculadoraciclosdesueno.com](https://calcu
 
 ---
 
----
-
-## 🚀 Cómo Integrar la Calculadora en tu Sitio Web
+## Cómo Integrar la Calculadora en tu Sitio Web
 
 Integra fácilmente nuestra calculadora en tu blog o página web copiando el siguiente código embed. Esto permitirá a tus visitantes calcular sus ciclos de sueño directamente desde tu sitio.
 
