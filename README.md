@@ -25,3 +25,10 @@ Puedes integrar fácilmente nuestra calculadora en tu blog o página web copiand
     ></iframe>
   </div>
 </div>
+<p style="text-align:center; font-size:0.98rem; margin-top:0.6em;">
+  <span style="color:#454553;">Calculadora por</span>
+  <a href="https://calculadoraciclosdesueno.com/" target="_blank" rel="noopener noreferrer"
+     style="color:#3578e5; text-decoration:underline; font-weight:500;">
+    calculadoraciclosdesueno.com
+  </a>
+</p>
