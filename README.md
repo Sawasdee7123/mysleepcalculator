@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calculadora de Sueño
 
-## Getting Started
+**Calculadora de Sueño** es una herramienta gratuita que te ayuda a descubrir la mejor hora para dormir o despertarte, basada en ciclos de sueño de 90 minutos. Nuestro objetivo es ayudarte a optimizar tu descanso para sentirte más renovado cada día.
 
-First, run the development server:
+Accede a la calculadora en: [https://calculadoraciclosdesueno.com](https://calculadoraciclosdesueno.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Cómo Integrar la Calculadora en tu Sitio Web
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Puedes integrar fácilmente nuestra calculadora en tu blog o página web copiando el siguiente código embed. Esto permitirá a tus visitantes calcular sus ciclos de sueño directamente desde tu sitio.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Código Embed:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```html
+<div style="max-width:410px; width:100%; background:#0c0c0c; border-radius:28px; margin:0 auto;">
+  <div style="position:relative; width:100%; padding-top:136.5%;">
+    <iframe
+      src="https://calculadoraciclosdesueno.com/widget"
+      title="Calculadora de Sueño"
+      aria-label="Calculadora de Sueño"
+      loading="lazy"
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:28px; background:#0c0c0c;"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
