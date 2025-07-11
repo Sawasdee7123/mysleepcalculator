@@ -1,14 +1,33 @@
 # Calculadora de Sueño
 
-**Calculadora de Sueño** es una herramienta gratuita que te ayuda a descubrir la mejor hora para dormir o despertarte, basada en ciclos de sueño de 90 minutos. Nuestro objetivo es ayudarte a optimizar tu descanso para sentirte más renovado cada día.
+**Calculadora de Sueño** es una herramienta gratuita y fácil de usar que te ayuda a descubrir la mejor hora para dormir o despertarte, basándose en ciclos naturales de sueño de 90 minutos. Optimiza tu descanso, despiértate renovado y mejora tu salud del sueño con solo un clic.
 
 Accede a la calculadora en: [https://calculadoraciclosdesueno.com](https://calculadoraciclosdesueno.com)
 
 ---
 
+## Características principales
+
+- 100% gratuita y en español
+- Calcula la mejor hora para dormir o despertar
+- Basada en ciclos de sueño naturales
+- Totalmente responsive (funciona en móvil, tablet y PC)
+- Widget fácil de integrar en cualquier sitio web o blog
+- Sin necesidad de registro
+
+---
+
+## Vista previa
+
+![Vista previa de la Calculadora de Sueño](public/screenshot.png)
+
+---
+
+---
+
 ## 🚀 Cómo Integrar la Calculadora en tu Sitio Web
 
-Puedes integrar fácilmente nuestra calculadora en tu blog o página web copiando el siguiente código embed. Esto permitirá a tus visitantes calcular sus ciclos de sueño directamente desde tu sitio.
+Integra fácilmente nuestra calculadora en tu blog o página web copiando el siguiente código embed. Esto permitirá a tus visitantes calcular sus ciclos de sueño directamente desde tu sitio.
 
 ### Código Embed:
 
