@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
+
   openGraph: {
     // Open Graph data for social link previews
     title: 'Calculadora de Sueño | Descubre tu Hora Ideal para Dormir y Despertar',
@@ -49,6 +50,7 @@ export const metadata: Metadata = {
     siteName: 'Calculadora de Sueño',
     type: 'website',
   },
+
   twitter: {
     // Twitter Card meta for Twitter link previews
     card: 'summary_large_image',
@@ -56,6 +58,7 @@ export const metadata: Metadata = {
     description: 'Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar. Mejora tu descanso y bienestar con horarios de sueño personalizados.',
     images: ['/og-image.png'],
   },
+
   alternates: {
     canonical: 'https://calculadoraciclosdesueno.com/',
   },
