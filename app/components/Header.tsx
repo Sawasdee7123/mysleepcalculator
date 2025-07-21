@@ -1,40 +1,75 @@
-// Instructs Next.js to render this component on the client side (for interactivity)
 'use client';
 
-import Link from 'next/link'; // Import Next.js Link component for internal navigation (no full page reload)
-import Image from 'next/image'; // Import Next.js Image component for optimized images (automatic resizing, lazy loading, etc.)
-import styles from '../page.module.css'; // Import CSS module for component-specific styles
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from '../page.module.css';
 
-// Header component: displays the logo and site title, both clickable and linking to the homepage
+const NAV_LINKS = [
+  { href: '/', label: 'Calculadora' },
+  { href: '/como-dormir-mejor', label: 'Cómo Dormir Mejor' },
+  { href: '/incluir-calculadora-sueno-en-mi-web', label: 'Añadir la Calculadora en tu Web' },
+  { href: '/about', label: 'Sobre Nosotros' },
+  { href: '/contacto', label: 'Contacto' },
+];
+
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    // Apply custom header styling and horizontally center content
-    <div className={styles.header} style={{ justifyContent: 'center' }}>
-
-      {/* Entire header is a link to the homepage for easy navigation */}
-      <Link
-        href="/"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          textDecoration: 'none',
-        }}
-        aria-label="Ir a la página principal"
-      >
-
-        {/* Logo image (optimized for web with next/image) */}
-        <Image
-          src="/logo.png"
-          alt="Logo de la Calculadora de Sueño"
-          width={96}
-          height={96}
-          priority
-          className={styles.logo}
-        />
-
-        {/* Main site title, styled with CSS module */}
-        <h1 className={styles.title}>Calculadora de Sueño</h1>
-      </Link>
-    </div>
+    <header className={styles.headerWrapper}>
+      {/* Centered logo and title */}
+      <div className={styles.brandContainer}>
+        <Link href="/" className={styles.logoLink} aria-label="Ir a la página principal">
+          <Image
+            src="/logo.png"
+            alt="Logo de la Calculadora de Sueño"
+            width={96}
+            height={96}
+            priority
+            className={styles.logo}
+          />
+          {/* Use h1 for SEO and branding, keep your original class */}
+          <h1 className={styles.title}>Calculadora de Sueño</h1>
+        </Link>
+      </div>
+      {/* Centered nav bar */}
+      <nav className={styles.navbar}>
+        <ul className={styles.navLinks}>
+          {NAV_LINKS.map(link => (
+            <li key={link.href}>
+              <Link href={link.href} className={styles.navLink}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {/* Hamburger for mobile */}
+        <button
+          className={styles.mobileMenuButton}
+          aria-label="Menú"
+          onClick={() => setMobileOpen(o => !o)}
+        >
+          <span className={styles.hamburger}></span>
+          <span className={styles.hamburger}></span>
+          <span className={styles.hamburger}></span>
+        </button>
+        {mobileOpen && (
+          <ul className={styles.mobileNavLinks}>
+            {NAV_LINKS.map(link => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </nav>
+    </header>
   );
 }
