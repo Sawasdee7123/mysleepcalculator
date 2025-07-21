@@ -1,12 +1,4 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; /* spacing between logo and title */
-  margin-bottom: 0;
-  margin-top: 2.0rem;   /* <--- Add or adjust this value! */
-}
-
+/* ===== Main page content styles ===== */
 .main {
   display: flex;
   flex-direction: column;
@@ -15,12 +7,6 @@
   text-align: center;
   position: relative; /* needed for star layering */
   z-index: 1;         /* ensures content is above stars */
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
 }
 
 .description {
@@ -41,20 +27,29 @@
   }
 }
 
+/* ===== Desktop header/nav styles ===== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0;
+  margin-top: 2.0rem;
+}
+
 .headerWrapper {
   width: 100%;
   background: linear-gradient(180deg, #181f39 0%, #0c1027 100%);
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
   padding: 0.5rem 0 0.5rem 0;
-  /* position: sticky; */
-  /* top: 0; */
   z-index: 20;
   border-bottom: 1px solid rgba(244, 211, 94, 0.2);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  position: relative;
 }
 
-/* Brand container centers content */
 .brandContainer {
   display: flex;
   justify-content: center;
@@ -62,7 +57,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Logo link flexes logo and h1 */
 .logoLink {
   display: flex;
   align-items: center;
@@ -70,12 +64,12 @@
   gap: 1.2rem;
 }
 
-/* Logo big on desktop, smaller on mobile */
 .logo {
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+  width: 96px;
+  height: 96px;
 }
 
-/* Use your original title style for h1 */
 .title {
   color: #f4d35e;
   font-family: var(--font-playfair, 'Playfair Display', serif);
@@ -86,7 +80,6 @@
   line-height: 1.1;
 }
 
-/* Nav centered below */
 .navbar {
   display: flex;
   justify-content: center;
@@ -118,13 +111,14 @@
 }
 
 .mobileMenuButton {
-  display: none;
+  display: none !important;
 }
 
-/* Responsive for mobile */
+/* ===== Responsive for mobile (header/nav/menu) ===== */
+
 @media (max-width: 700px) {
   .brandContainer {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0; /* remove any bottom margin on mobile */
   }
   .logo {
     width: 56px !important;
@@ -137,14 +131,18 @@
     display: none;
   }
   .mobileMenuButton {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: static;
+    margin-left: auto;
+    margin-right: 0;
+    z-index: 1100;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    margin-left: auto;
   }
   .hamburger {
     width: 28px;
@@ -155,33 +153,51 @@
     display: block;
   }
   .headerWrapper {
-    background: #0c1027; /* Or rgba(12,16,39,0.98) for slight transparency */
-    /* Optional: keep border and blur for visual consistency */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: #0c1027;
     border-bottom: 1px solid rgba(244, 211, 94, 0.2);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    z-index: 102;
+    padding-left: 1rem;   /* some breathing room */
+    padding-right: 1rem;
+    padding-top: 0.3rem;  /* reduce top/bottom padding for compactness */
+    padding-bottom: 0.3rem;
   }
+  /* Mobile nav covers full screen except header */
   .mobileNavLinks {
-    position: absolute;
-    top: 44px;
-    right: 0;
+    position: fixed;
+    top: 56px; /* adjust this to match your mobile header height! */
     left: 0;
+    right: 0;
+    width: 100vw;
     background: #0c1027;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.11);
+    z-index: 2000;
     list-style: none;
-    padding: 1rem 0;
     margin: 0;
-    z-index: 100;
+    padding: 1.2rem 0;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2.2rem;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.11);
+    border-bottom: 1px solid rgba(244, 211, 94, 0.12);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
   .mobileNavLink {
+    width: 100%;
+    box-sizing: border-box;
     color: #f5f7fa;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 0.8rem 0;
   }
   .mobileNavLink:hover,
   .mobileNavLink:focus {
@@ -189,4 +205,3 @@
     background: rgba(244, 211, 94, 0.10);
   }
 }
-
