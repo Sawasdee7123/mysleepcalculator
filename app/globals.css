@@ -66,12 +66,11 @@ p {
   }
 }
 
-/* ----- SELECT DROPDOWN BASE STYLING ----- */
 select,
 select option {
   background: #23233a;
   color: #fff;
-  text-align-last: center;
+  text-align-last: center;    /* For Firefox, Chrome */
   text-align: center;
   font-size: 2.1rem;
   font-weight: 700;
@@ -87,25 +86,12 @@ select {
   border-radius: 0;
   box-shadow: none;
   height: 2.6em;
-
-  /* Force consistent custom styles across mobile */
+  /* Remove the default dropdown arrow (if desired) */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
-  /* Optional custom arrow placeholder (not shown on all devices) */
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1rem;
 }
 
-/* iOS override fix */
-select::-webkit-date-and-time-value {
-  text-align: center;
-}
-
-/* Remove extra space on focus */
 select:focus {
   outline: none;
   box-shadow: 0 0 0 2px #e6debb55;
@@ -117,7 +103,7 @@ select:focus {
   outline-offset: 2px;
 }
 
-/* ----- Responsive Typography for Mobile ----- */
+/* Responsive Typography for Mobile */
 @media (max-width: 480px) {
   h1 {
     font-size: 2rem;
@@ -125,10 +111,5 @@ select:focus {
 
   p {
     font-size: 1rem;
-  }
-
-  select {
-    font-size: 1.9rem;
-    padding: 8px 0 !important;
   }
 }
