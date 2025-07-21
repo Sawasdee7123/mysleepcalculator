@@ -144,54 +144,25 @@ export default function CalculatorInstructions() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main style={{
-        maxWidth: 900,
-        margin: '0 auto',
-        padding: '2.6rem 1.1rem 3.5rem 1.1rem',
-        color: '#fff',
-        fontFamily: 'Inter, Arial, sans-serif'
-      }}>
+      <main className="main-style">
 
         {/* Title and Intro */}
-        <h1 style={{
-          color: '#f4d35e',
-          fontFamily: 'Playfair Display, Georgia, serif',
-          fontWeight: 800,
-          fontSize: '2.4rem',
-          marginBottom: '1.5rem',
-          lineHeight: 1.14
-        }}>
+        <h1>
           Cómo añadir la Calculadora de Sueño a tu página web
         </h1>
 
-        <p style={{
-          color: '#fff',
-          fontSize: '1.15rem',
-          marginBottom: '1.7rem'
-        }}>
+        <p>
           ¿Quieres incluir nuestra Calculadora de Sueño en tu sitio web, blog o página de salud? Es muy fácil: sigue estos pasos para añadir la calculadora interactiva, totalmente gratis y sin registros.
         </p>
 
         {/* Quick Instructions Heading */}
-        <h2 style={{
-          color: '#ffe082',
-          fontSize: '1.38rem',
-          fontWeight: 700,
-          marginBottom: '0.9rem',
-          marginTop: '2rem',
-        }}>
+        <h2>
           Instrucciones rápidas
         </h2>
 
         {/* Step 1: Copy the code */}
-        <ol style={{
-          color: '#fff',
-          fontSize: '1.08rem',
-          marginBottom: '2.1rem',
-          paddingLeft: 22,
-          lineHeight: 1.64
-        }}>
-          <li style={{ marginBottom: '.7em' }}>
+        <ol>
+          <li>
             Copia el siguiente código y pégalo donde quieras mostrar la calculadora en tu web.
           </li>
         </ol>
@@ -246,25 +217,19 @@ export default function CalculatorInstructions() {
         </div>
 
         {/* Steps 2-4: Paste, check, contact */}
-        <ol start={2} style={{
-          color: '#fff',
-          fontSize: '1.08rem',
-          marginBottom: '2.1rem',
-          paddingLeft: 22,
-          lineHeight: 1.64
-        }}>
-          <li style={{ marginBottom: '.7em' }}>
+        <ol start={2}>
+          <li>
             Pega el código en tu página, post, sección lateral o donde desees mostrar la calculadora.
             Si usas WordPress, Blogger u otra plataforma, utiliza un bloque de tipo HTML personalizado o “Custom HTML” para pegar el código.
           </li>
-          <li style={{ marginBottom: '.7em' }}>
+          <li>
             Guarda los cambios y revisa que la calculadora se muestre correctamente, tanto en móvil como en ordenador.
           </li>
           <li>
-            Si tienes dudas o necesitas ayuda personalizada, contáctanos en{' '}
+            Si tienes dudas o necesitas ayuda personalizada, contáctanos en:{' '}
             <a
               href="mailto:info@calculadoraciclosdesueno.com"
-              style={{ color: '#ffe082', fontWeight: 600, textDecoration: 'underline' }}
+              className="email-link"
             >
               info@calculadoraciclosdesueno.com
             </a>
@@ -272,62 +237,41 @@ export default function CalculatorInstructions() {
         </ol>
 
         {/* FAQ Section */}
-        <h2 style={{
-          color: '#ffe082',
-          fontSize: '1.9rem',
-          marginTop: '2.8rem',
-          marginBottom: '1.1rem',
-          textShadow: '0 1px 4px rgba(255, 224, 130, 0.2)',
-        }}>
+        <h2>
           Preguntas Frecuentes (FAQ)
         </h2>
 
         {/* Each FAQ as a details/summary for easy mobile reading */}
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿La calculadora es gratis?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿La calculadora es gratis?</summary>
+          <p>
             Sí, puedes añadirla libremente a tu web y ofrecerla a tus lectores.
           </p>
         </details>
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Funciona en móviles?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Funciona en móviles?</summary>
+          <p>
             Sí, el widget es completamente adaptable y se muestra bien en cualquier pantalla.
           </p>
         </details>
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Cómo puedo asegurarme de que es segura para mis usuarios?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Cómo puedo asegurarme de que es segura para mis usuarios?</summary>
+          <p>
             La calculadora no recopila datos personales ni requiere registro. Es solo una herramienta de ayuda, rápida y segura para el usuario.
           </p>
         </details>
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿En qué tipo de webs puedo incluir la calculadora?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿En qué tipo de webs puedo incluir la calculadora?</summary>
+          <p>
             En cualquier web, blog, portal educativo, sitio de salud o bienestar.
           </p>
         </details>
 
         {/* Final note */}
-        <div style={{ marginTop: '2.7rem', color: '#bfc3d1', fontSize: '1rem' }}>
+        <div className="page-note">
           ¿Tienes una comunidad, blog o página web de salud y bienestar? Añadir la Calculadora de Sueño es una forma sencilla de ofrecer más valor a tus usuarios. ¡Sin registros ni pagos!
         </div>
       </main>
     </Fragment>
   );
 }
-
-// FAQ summary (question) style
-const summaryStyle = {
-  cursor: 'pointer',
-  color: '#f4d35e',
-  fontSize: '1.3rem',
-  marginBottom: '0.5rem',
-};
-
-// FAQ answer (paragraph) style
-const paragraphStyle = {
-  fontSize: '1.08rem',
-  lineHeight: 1.58,
-  marginTop: '0.8rem',
-};

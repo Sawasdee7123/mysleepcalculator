@@ -12,6 +12,18 @@ a {
   text-decoration: none;
 }
 
+/* === Highlighted/CTA Link Utility === */
+.cta-link {
+  color: #f4d35e;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.cta-link:hover,
+.cta-link:focus {
+  color: #ffe082;
+}
+
 /* === Button Styles === */
 /* Basic button reset and inheritance for brand font and colors */
 button {

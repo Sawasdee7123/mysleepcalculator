@@ -26,7 +26,20 @@
 
 /* === Special Link Highlight (Email or CTA) === */
 .email-link {
-  color: #ffe082;                        /* Highlight color */
+  color: #f4d35e;                        /* Highlight color */
   font-weight: 600;                      /* Semi-bold for emphasis */
   text-decoration: underline;            /* Underlined by default */
+  transition: color 0.2s;
+}
+.email-link:hover,
+.email-link:focus {
+  color: #ffe082;
+}
+
+/* === Page Note / Footnote / Subtle Info Section === */
+.page-note {
+  margin-top: 2.7rem;
+  color: #bfc3d1;
+  font-size: 1rem;
+  font-style: normal;   /* If you ever want italics, add another class */
 }

@@ -46,9 +46,9 @@ export default function NotFoundPage() {
       />
 
       {/* Big 404 headline */}
-      <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
+      <h1>404</h1>
       {/* User-friendly message */}
-      <p style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>
+      <p>
         Oops... No hemos podido encontrar la página que buscas.
       </p>
       {/* Button to go back to homepage */}

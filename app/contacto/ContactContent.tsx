@@ -42,14 +42,14 @@ export default function ContactContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
 
-      <main style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem' }}>
-        <h1 className="mb-2">Ponte en Contacto</h1>
+      <main className="main-style">
+        <h1>Ponte en Contacto</h1>
 
-        <p className="paragraph">
+        <p>
           ¿Tienes dudas, comentarios o sugerencias? Estaremos encantados de escucharte.
         </p>
 
-        <p className="paragraph">
+        <p>
           Puedes escribirnos directamente a:{' '}
           <a
             href="mailto:info@calculadoraciclosdesueno.com"
@@ -59,7 +59,7 @@ export default function ContactContent() {
           </a>
         </p>
 
-        <p className="paragraph">
+        <p>
           Normalmente respondemos en menos de 48 horas.
         </p>
       </main>

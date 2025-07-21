@@ -5,7 +5,7 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-// Import the ReturnButton
+// Import the Returnbutton
 import ReturnButton from '@/app/components/ReturnButton';
 
 // Structured data for SEO: Article schema (Schema.org) describing the page content.
@@ -104,19 +104,12 @@ export default function LearnContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem', color: '#f9f9f9' }}>
-        <h1
-          style={{
-            fontSize: '2.4rem',
-            marginBottom: '1.2rem',
-            color: '#f4d35e',
-            textShadow: '0 1px 6px rgba(244, 211, 94, 0.25)',
-          }}
-        >
+      <main className="main-style">
+        <h1>
           Aprende a Dormir Mejor, Despierta Renovado
         </h1>
 
-        <p style={paragraphStyle}>
+        <p>
           ¿Cansado de despertar sin energía aunque duermas muchas horas? La clave no está solo en cuánto duermes,
           sino en cuándo te despiertas. Nuestra calculadora de ciclos de sueño te ayuda a identificar el momento ideal
           para acostarte o despertarte, asegurando un descanso profundo y reparador.
@@ -124,20 +117,20 @@ export default function LearnContent() {
 
         <ReturnButton />
 
-        <h2 style={sectionStyle}>¿Cómo Funciona la Calculadora de Sueño?</h2>
-        <p style={paragraphStyle}>
+        <h2>¿Cómo Funciona la Calculadora de Sueño?</h2>
+        <p>
           Puedes usar la calculadora de dos maneras:
         </p>
-        <ul style={listStyle}>
+        <ul>
           <li><strong>¿Sabes a qué hora debes despertarte?</strong> Te mostramos a qué hora acostarte para completar 5 o 6 ciclos.</li>
           <li><strong>¿Vas a dormir ahora?</strong> Calculamos las mejores horas para despertarte sin interrumpir un ciclo.</li>
         </ul>
-        <p style={paragraphStyle}>
+        <p>
           Recuerda que la mayoría de las personas tardan unos 15 minutos en quedarse dormidas. ¡Tenlo en cuenta!
         </p>
 
-        <h2 style={sectionStyle}>Beneficios de un Sueño de Calidad</h2>
-        <ul style={listStyle}>
+        <h2>Beneficios de un Sueño de Calidad</h2>
+        <ul>
           <li>Mejora la concentración, la memoria y la productividad.</li>
           <li>Reduce el riesgo de enfermedades cardíacas y accidentes cerebrovasculares.</li>
           <li>Fortalece el sistema inmunológico.</li>
@@ -149,24 +142,24 @@ export default function LearnContent() {
 
         <ReturnButton />
 
-        <h2 style={sectionStyle}>¿Qué son los Ciclos de Sueño?</h2>
-        <p style={paragraphStyle}>
+        <h2>¿Qué son los Ciclos de Sueño?</h2>
+        <p>
           Mientras duermes, tu cuerpo atraviesa ciclos de aproximadamente 90 minutos, que se repiten de 4 a 6 veces por noche. Cada ciclo incluye distintas fases:
         </p>
-        <ul style={listStyle}>
+        <ul>
           <li><strong>Fase 1 (NREM):</strong> Transición breve entre la vigilia y el sueño.</li>
           <li><strong>Fase 2 (NREM):</strong> Sueño ligero; disminuyen el ritmo cardíaco y la temperatura corporal.</li>
           <li><strong>Fase 3 (NREM):</strong> Sueño profundo y reparador. Se libera la hormona del crecimiento.</li>
           <li><strong>Fase REM:</strong> Alta actividad cerebral. Aquí ocurren los sueños más vívidos y se consolida la memoria.</li>
         </ul>
 
-        <h2 style={sectionStyle}>¿Cuántos Ciclos Necesitamos Dormir?</h2>
-        <p style={paragraphStyle}>
+        <h2>¿Cuántos Ciclos Necesitamos Dormir?</h2>
+        <p>
           Lo ideal es dormir entre 5 y 6 ciclos completos cada noche, lo que equivale a unas 7,5 a 9 horas de sueño. Dormir menos o interrumpir un ciclo puede hacerte sentir más cansado al despertar.
         </p>
 
-        <h2 style={sectionStyle}>¿Cuántas Horas de Sueño Necesito Según Mi Edad?</h2>
-        <ul style={listStyle}>
+        <h2>¿Cuántas Horas de Sueño Necesito Según Mi Edad?</h2>
+        <ul>
           <li><strong>0–3 meses:</strong> 14–17 horas</li>
           <li><strong>4–11 meses:</strong> 12–15 horas</li>
           <li><strong>1–2 años:</strong> 11–14 horas</li>
@@ -177,8 +170,8 @@ export default function LearnContent() {
           <li><strong>+65 años:</strong> 7–8 horas</li>
         </ul>
 
-        <h2 style={sectionStyle}>Consejos para Mejorar tu Higiene del Sueño</h2>
-        <ul style={listStyle}>
+        <h2>Consejos para Mejorar tu Higiene del Sueño</h2>
+        <ul>
           <li>Establece un horario regular para acostarte y despertarte, incluso fines de semana.</li>
           <li>Crea una rutina relajante: lee, medita o date un baño tibio antes de dormir.</li>
           <li>Evita pantallas al menos 30-60 minutos antes de acostarte.</li>
@@ -188,46 +181,46 @@ export default function LearnContent() {
           <li>Realiza ejercicio diario, pero evita actividades intensas por la noche.</li>
           <li>
             Usa herramientas como nuestra{' '}
-            <Link href="/" style={{ color: '#f4d35e', fontWeight: 600 }}>
+            <Link href="/" className="cta-link">
               Calculadora de Sueño
             </Link>{' '}
             para planificar mejor tu descanso.
           </li>
         </ul>
 
-        <h2 style={sectionStyle}>Preguntas Frecuentes (FAQ)</h2>
+        <h2>Preguntas Frecuentes (FAQ)</h2>
 
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Cuál es la mejor hora para acostarse?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Cuál es la mejor hora para acostarse?</summary>
+          <p>
             Entre las 22:00h y las 23:30h. Esto permite que tu sueño profundo coincida con las horas de mayor oscuridad y se alinee con tu reloj biológico.
           </p>
         </details>
 
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Qué pasa si me despierto en medio de un ciclo?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Qué pasa si me despierto en medio de un ciclo?</summary>
+          <p>
             Puedes sentirte aturdido, irritable o desorientado. Esto se debe a que interrumpiste una fase profunda del sueño, como el sueño NREM o REM.
           </p>
         </details>
 
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Dormir más siempre es mejor?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Dormir más siempre es mejor?</summary>
+          <p>
             No necesariamente. Dormir más de 9 horas puede ser contraproducente si no va acompañado de buena calidad del sueño. La regularidad también es clave.
           </p>
         </details>
 
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Cuánto tardo en dormirme?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Cuánto tardo en dormirme?</summary>
+          <p>
             En promedio, una persona tarda entre 10 y 20 minutos. Si tardas mucho más o te duermes de inmediato, podría indicar falta de sueño acumulado.
           </p>
         </details>
 
-        <details style={{ marginTop: '1rem' }}>
-          <summary style={summaryStyle}>¿Cómo saber cuántas horas debo dormir?</summary>
-          <p style={paragraphStyle}>
+        <details className="faq-details">
+          <summary className="faq-summary">¿Cómo saber cuántas horas debo dormir?</summary>
+          <p>
             Haz la prueba durante unas vacaciones: acuéstate a la misma hora todos los días y despiértate sin alarma. El promedio de horas que duermas será tu necesidad natural.
           </p>
         </details>
@@ -237,33 +230,3 @@ export default function LearnContent() {
     </Fragment>
   );
 }
-
-// Section heading style
-const sectionStyle = {
-  marginTop: '2rem',
-  fontSize: '1.9rem',
-  color: '#ffe082',
-  textShadow: '0 1px 4px rgba(255, 224, 130, 0.2)',
-};
-
-// Paragraph style
-const paragraphStyle = {
-  fontSize: '1.1rem',
-  lineHeight: 1.6,
-  marginTop: '0.8rem',
-};
-
-// List style for bullet points
-const listStyle = {
-  marginLeft: '1.5rem',
-  fontSize: '1.1rem',
-  lineHeight: 1.6,
-};
-
-// Summary style for FAQ dropdowns
-const summaryStyle = {
-  cursor: 'pointer',
-  color: '#f4d35e',
-  fontSize: '1.3rem',
-  marginBottom: '0.5rem',
-};

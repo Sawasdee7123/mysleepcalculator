@@ -18,24 +18,12 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
   }, [error]);
 
   return (
-    <main
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        backgroundColor: '#0a1128',
-        color: '#fff',
-        textAlign: 'center',
-        padding: '2rem',
-      }}
-    >
+    <main className="main-style">
 
       {/* Main error headline */}
-      <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>¡Algo salió mal!</h1>
+      <h1>¡Algo salió mal!</h1>
       {/* Friendly explanation */}
-      <p style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>
+      <p>
         Ocurrió un error inesperado. Por favor intenta nuevamente o vuelve a la página principal.
       </p>
       {/* Action buttons: retry or return home */}
