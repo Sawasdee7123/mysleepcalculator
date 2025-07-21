@@ -1,0 +1,32 @@
+/* ===========================================================
+ * animations.css
+ *
+ * Animation keyframes and utility classes for subtle UI motion
+ * and reduced-motion accessibility.
+ * =========================================================== */
+
+/* === Sparkle Animation === */
+/* Used for animated star backgrounds or subtle glowing effects */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.0; }
+  50% { opacity: 1; }
+}
+
+/* === Fade In Animation === */
+/* Utility class for fading elements into view smoothly */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Reduced Motion Accessibility === */
+/* Disable non-essential animations for users with reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .random-star {
+    animation: none !important;
+  }
+}

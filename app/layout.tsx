@@ -1,5 +1,5 @@
 // Import global CSS (applies to the whole app)
-import './globals.css';
+import './styles/globals.css';
 // Import Google Fonts utilities from Next.js (for consistent typography)
 import { Inter, Playfair_Display } from 'next/font/google';
 // Import TypeScript type for page metadata (for type checking)
@@ -105,6 +105,7 @@ export default function RootLayout({
         </Script>
 
       </head>
+
       <body
         className={`${inter.variable} ${playfair.variable}`}
         style={{

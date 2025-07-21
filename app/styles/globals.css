@@ -1,0 +1,41 @@
+/* ==================================================
+ * globals.css
+ * Root layout styles for the Sleep Calculator site
+ * - Imports segmented style modules for modularity
+ * - Applies base layout, font, box-sizing, and body background
+ * ================================================== */
+
+@import './typography.css';     /* Headings, paragraphs, and responsive text */
+@import './form-elements.css';  /* Styling for select, button, anchor, etc. */
+@import './utilities.css';      /* Reusable helper classes (margins, text, color) */
+@import './animations.css';     /* Keyframe and motion rules */
+@import './accessibility.css';  /* Focus outlines and accessibility improvements */
+
+/* === Base Layout and Defaults === */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: #0a1128;
+  color: #ffffff;
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Ensures main app content appears above decorative backgrounds */
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Use border-box sizing model throughout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

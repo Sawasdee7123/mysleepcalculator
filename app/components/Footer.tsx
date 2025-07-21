@@ -98,6 +98,19 @@ export default function Footer() {
           Contacto
         </Link>
 
+        {/* Privacy Policy Link */}
+        <Link
+          href="/privacidad"
+          style={{
+            color: '#f4d35e',
+            textDecoration: 'none',
+            fontWeight: 600,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Privacidad
+        </Link>
+
       </nav>
 
       {/* Copyright */}

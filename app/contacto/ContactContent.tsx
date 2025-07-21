@@ -42,48 +42,28 @@ export default function ContactContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
 
-      <main style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem', color: '#f9f9f9' }}>
-        <h1 style={headingStyle}>Ponte en Contacto</h1>
+      <main style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem' }}>
+        <h1 className="mb-2">Ponte en Contacto</h1>
 
-        <p style={paragraphStyle}>
+        <p className="paragraph">
           ¿Tienes dudas, comentarios o sugerencias? Estaremos encantados de escucharte.
         </p>
 
-        <p style={paragraphStyle}>
+        <p className="paragraph">
           Puedes escribirnos directamente a:{' '}
           <a
             href="mailto:info@calculadoraciclosdesueno.com"
-            style={emailStyle}
+            className="email-link"
           >
             info@calculadoraciclosdesueno.com
           </a>
         </p>
 
-        <p style={paragraphStyle}>
+        <p className="paragraph">
           Normalmente respondemos en menos de 48 horas.
         </p>
-
       </main>
+
     </Fragment>
   );
 }
-
-// Styles
-const headingStyle = {
-  fontSize: '2.4rem',
-  marginBottom: '1.2rem',
-  color: '#f4d35e',
-  textShadow: '0 1px 6px rgba(244, 211, 94, 0.25)',
-};
-
-const paragraphStyle = {
-  fontSize: '1.1rem',
-  lineHeight: 1.6,
-  marginTop: '0.8rem',
-};
-
-const emailStyle = {
-  color: '#ffe082',
-  fontWeight: 600,
-  textDecoration: 'underline',
-};

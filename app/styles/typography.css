@@ -1,0 +1,52 @@
+/* ===========================================================
+ * typography.css
+ * 
+ * Core typography styles for headings, paragraphs, and
+ * text blocks across the site. Ensures a harmonious visual
+ * hierarchy and easy-to-read content. Responsive adjustments
+ * for mobile included at the end.
+ * =========================================================== */
+
+/* === Main Page Heading === */
+h1 {
+  font-family: var(--font-playfair);   /* Branded serif font for titles */
+  font-weight: 700;                    /* Extra bold for strong presence */
+  font-size: 2.5rem;                   /* Large desktop heading */
+  margin-bottom: 1rem;                 /* Consistent spacing below */
+}
+
+/* === Section Heading === */
+h2 {
+  font-size: 2rem;                     /* Slightly smaller than h1 */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* === Subheading === */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* === Base Paragraph Text === */
+p {
+  font-size: 1.125rem;                 /* Main text size for paragraphs */
+  margin-bottom: 2rem;                 /* Extra spacing for readability */
+}
+
+/* === Paragraph Utility Class === */
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;                    /* Comfortable line height */
+  margin-top: 0.8rem;
+  color: inherit;                      /* Inherit parent text color */
+}
+
+/* === Responsive Typography for Small Devices === */
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }              /* Reduce heading size for mobile */
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  p  { font-size: 1rem; }
+}

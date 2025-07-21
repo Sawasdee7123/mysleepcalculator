@@ -1,0 +1,77 @@
+/* ============================================================
+ * form-elements.css
+ *
+ * Resets and custom styling for anchors, buttons, selects,
+ * and form controls to match brand and UI standards.
+ * ============================================================ */
+
+/* === Anchor (Link) Styles === */
+/* Inherit color from parent; remove underline unless styled otherwise */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* === Button Styles === */
+/* Basic button reset and inheritance for brand font and colors */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+/* === Select Dropdowns === */
+/* Custom background, font, centering, and removes browser styling */
+select,
+select option {
+  background: #23233a;
+  color: #fff;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  appearance: none;           /* Remove OS/browser default arrow */
+  height: 2.6em;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Highlight select on focus for accessibility */
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e6debb55;
+}
+
+/* === Input and Textarea === */
+/* Brand background, white text, rounded, and subtle border */
+input,
+textarea {
+  background: #23233a;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* Focus effect for input and textarea fields */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e6debb;
+  box-shadow: 0 0 0 2px #e6debb55;
+}
+
+/* === Form Label Utility === */
+/* Makes labels bold and aligns them with spacing */
+.form-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}

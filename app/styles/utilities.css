@@ -1,0 +1,32 @@
+/* ===========================================================
+ * utilities.css
+ *
+ * Small, reusable utility classes for layout, text alignment,
+ * spacing, font weight, and special highlight elements like
+ * links. Use these for quick, modular styling in components.
+ * =========================================================== */
+
+/* === Text Alignment Utilities === */
+.text-center { text-align: center; }     /* Centered text */
+.text-left   { text-align: left; }       /* Left-aligned text */
+.text-right  { text-align: right; }      /* Right-aligned text */
+
+/* === Margin Utilities (top and bottom) === */
+.mt-1 { margin-top: 1rem; }              /* Medium top margin */
+.mt-2 { margin-top: 2rem; }              /* Large top margin */
+.mb-1 { margin-bottom: 1rem; }           /* Medium bottom margin */
+.mb-2 { margin-bottom: 2rem; }           /* Large bottom margin */
+
+/* === Font Weight Utilities === */
+.font-bold  { font-weight: 700; }        /* Bold font */
+.font-light { font-weight: 300; }        /* Light font */
+
+/* === Underline Utility === */
+.underline { text-decoration: underline; } /* Underlined text */
+
+/* === Special Link Highlight (Email or CTA) === */
+.email-link {
+  color: #ffe082;                        /* Highlight color */
+  font-weight: 600;                      /* Semi-bold for emphasis */
+  text-decoration: underline;            /* Underlined by default */
+}
