@@ -5,9 +5,6 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-// Import the ReturnButton
-import ReturnButton from '@/app/components/ReturnButton';
-
 // Structured data for SEO: FAQPage schema (Schema.org)
 const contactSchema = {
   "@context": "https://schema.org",
@@ -66,7 +63,6 @@ export default function ContactContent() {
           Normalmente respondemos en menos de 48 horas.
         </p>
 
-        <ReturnButton />
       </main>
     </Fragment>
   );
