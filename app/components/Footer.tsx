@@ -111,6 +111,18 @@ export default function Footer() {
           Privacidad
         </Link>
 
+        <Link
+          href="/terminos"
+          style={{
+            color: '#f4d35e',
+            textDecoration: 'none',
+            fontWeight: 600,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Términos y Condiciones
+        </Link>
+
       </nav>
 
       {/* Copyright */}
