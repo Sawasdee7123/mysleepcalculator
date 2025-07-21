@@ -1,8 +1,10 @@
-// app/about/page.tsx
-
+// Import the main content component for the Learn page
 import AboutContent from './AboutContent';
+
+// Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
+// Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
   title: 'Sobre Nosotros | Calculadora de Sueño',
   description: 'Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.',
@@ -35,6 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
+// Page component for /about, renders the AboutContent component
 export default function AboutPage() {
   return <AboutContent />;
 }

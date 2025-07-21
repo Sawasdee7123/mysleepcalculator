@@ -83,7 +83,20 @@ export default function Footer() {
           }}
         >
           Sobre Nosotros
-       </Link>
+        </Link>
+
+        {/* Contact Link */}
+        <Link
+          href="/contacto"
+          style={{
+            color: '#f4d35e',
+            textDecoration: 'none',
+            fontWeight: 600,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Contacto
+        </Link>
 
       </nav>
 

@@ -32,6 +32,7 @@ const aboutPageSchema = {
   }
 };
 
+// Reusable Return Button component: styled link to return to the main calculator page.
 const ReturnButton = () => (
   <div style={{ marginTop: '2rem' }}>
     <Link
@@ -52,6 +53,14 @@ const ReturnButton = () => (
   </div>
 );
 
+/**
+ * Main content for the About page.
+ * - Explains the origin and purpose of the Sleep Calculator tool.
+ * - Highlights its benefits and creator's motivation.
+ * - Injects structured data using Schema.org AboutPage + Person.
+ * - Matches layout and style with other content pages.
+ * - Includes a ReturnButton linking back to the home calculator.
+ */
 export default function AboutContent() {
   return (
     <Fragment>
