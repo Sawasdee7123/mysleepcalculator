@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 // Import the Header and Footer components for site layout
 import Header from './Header';
 import Footer from './Footer';
+import CookieConsentBanner from './CookieConsentBanner';
 
 /**
  * LayoutShell component
@@ -20,10 +21,14 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
   // Determine if Header should be hidden (on "/widget" page)
   const hideHeader = pathname === '/widget';
 
+  // Determine if CookieConsentBanner should be hidden (on "/widget" page)
+  const hideCookieBanner = pathname === '/widget';
+
   return (
     <>
-      {/* Only show Header if not on the widget route */}
+      {/* Only show Header & CookieConsentBanner if not on the widget route */}
       {!hideHeader && <Header />}
+      {!hideCookieBanner && <CookieConsentBanner />}
       {/* Render the main page content */}
       {children}
     </>
