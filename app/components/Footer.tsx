@@ -71,6 +71,20 @@ export default function Footer() {
         >
           Añadir Calculadora en tu Web
         </Link>
+
+        {/* About Link */}
+        <Link
+          href="/about"
+          style={{
+            color: '#f4d35e',
+            textDecoration: 'none',
+            fontWeight: 600,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Sobre Nosotros
+       </Link>
+
       </nav>
 
       {/* Copyright */}
