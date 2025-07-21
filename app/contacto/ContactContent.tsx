@@ -5,26 +5,8 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-// Reusable Return Button
-const ReturnButton = () => (
-  <div style={{ marginTop: '2rem' }}>
-    <Link
-      href="/"
-      style={{
-        padding: '0.8rem 2rem',
-        borderRadius: '12px',
-        background: 'linear-gradient(90deg, #f4d35e 90%, #fff3b8 100%)',
-        color: '#181a30',
-        fontWeight: '700',
-        fontSize: '1.1rem',
-        textDecoration: 'none',
-        boxShadow: '0 4px 18px 0 #f4d35e33',
-      }}
-    >
-      ← Volver a la Calculadora
-    </Link>
-  </div>
-);
+// Import the ReturnButton
+import ReturnButton from '@/app/components/ReturnButton';
 
 // Structured data for SEO: FAQPage schema (Schema.org)
 const contactSchema = {
