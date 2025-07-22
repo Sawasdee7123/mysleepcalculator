@@ -23,7 +23,7 @@ export default function Header() {
     } else {
       document.body.style.overflow = '';
     }
-    function handleKeyDown(e) {
+    function handleKeyDown(e: KeyboardEvent) {
       if (mobileOpen && e.key === "Escape") setMobileOpen(false);
     }
     document.addEventListener('keydown', handleKeyDown);
