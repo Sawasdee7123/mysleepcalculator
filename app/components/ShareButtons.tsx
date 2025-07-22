@@ -52,42 +52,55 @@ export default function ShareButtons() {
         {/* WhatsApp */}
         <ShareLink
           href={`https://wa.me/?text=${encodedText}%20${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
           icon={<FaWhatsapp />}
           hoverColor="#25D366"
           title="Compartir en WhatsApp"
+          aria-label="Compartir en WhatsApp"
           onClick={() => trackEvent('share', 'share_click', 'WhatsApp')}
         />
 
         {/* Telegram */}
         <ShareLink
           href={`https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`}
+          target="_blank"
+          rel="noopener noreferrer"
           icon={<FaTelegramPlane />}
           hoverColor="#0088cc"
           title="Compartir en Telegram"
+          aria-label="Compartir en Telegram"
           onClick={() => trackEvent('share', 'share_click', 'Telegram')}
         />
 
         {/* X (Twitter) */}
         <ShareLink
           href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`}
+          target="_blank"
+          rel="noopener noreferrer"
           icon={<SiX />}
           hoverColor="#000000"
           title="Compartir en X"
+          aria-label="Compartir en X"
           onClick={() => trackEvent('share', 'share_click', 'X')}
         />
 
         {/* Facebook */}
         <ShareLink
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
           icon={<FaFacebookF />}
           hoverColor="#3b5998"
           title="Compartir en Facebook"
+          aria-label="Compartir en Facebook"
           onClick={() => trackEvent('share', 'share_click', 'Facebook')}
         />
 
         {/* Copy Link */}
         <button
           title="Copiar enlace"
+          aria-label="Copiar enlace"
           onClick={() => {
             handleCopy();
             trackEvent('share', 'share_click', 'CopyLink');
@@ -106,7 +119,7 @@ export default function ShareButtons() {
 
       {/* Popup message when link is copied */}
       {copied && (
-        <div style={popupStyle}>
+        <div style={popupStyle} role="status" aria-live="polite">
           ¡Enlace copiado!
         </div>
       )}

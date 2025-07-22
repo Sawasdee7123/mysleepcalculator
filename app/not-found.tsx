@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
   return (
     <main
+      aria-label="Página no encontrada"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -54,6 +55,7 @@ export default function NotFoundPage() {
       {/* Button to go back to homepage */}
       <Link
         href="/"
+        aria-label="Volver a la página principal"
         style={{
           padding: '1rem 2rem',
           borderRadius: '12px',

@@ -53,7 +53,7 @@ export default function AboutContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
       />
 
-      <main className="main-style">
+      <main className="main-style" aria-label="Contenido Sobre Nosotros">
         <h1>
           Sobre Nosotros
         </h1>

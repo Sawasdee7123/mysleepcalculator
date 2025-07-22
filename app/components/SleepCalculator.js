@@ -174,6 +174,8 @@ export default function SleepCalculator({ showAttribution = false }) {
             <button
               key={opt.key}
               type="button"
+              aria-pressed={mode === opt.key}
+              aria-label={`Seleccionar modo: ${opt.label}`}
               onClick={() => {
                 setMode(opt.key);
                 if (opt.key === "wake") {
@@ -363,7 +365,7 @@ export default function SleepCalculator({ showAttribution = false }) {
       </div>
 
       {/* ---- Results Card ---- */}
-      <div style={resultTransition}>
+      <div style={resultTransition} role="region" aria-live="polite" aria-label="Resultados de la Calculadora de Sueño">
         {/* Results heading */}
         <div style={{
           textAlign: "center",

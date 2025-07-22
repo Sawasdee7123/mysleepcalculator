@@ -29,21 +29,26 @@ export default function CookieConsentBanner() {
   if (!visible) return null;
 
   return (
-    <div style={{
-      position: 'fixed',
-      bottom: 0,
-      left: 0,
-      width: '100%',
-      zIndex: 9999,
-      background: 'rgba(30, 30, 30, 0.95)',
-      color: '#f4d35e',
-      padding: '1.2rem 1rem 1.2rem 1rem',
-      boxShadow: '0 -4px 24px 0 rgba(0,0,0,0.17)',
-      textAlign: 'center',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
+    <div
+      role="dialog"
+      aria-live="polite"
+      aria-label="Aviso de uso de cookies"
+      style={{
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 9999,
+        background: 'rgba(30, 30, 30, 0.95)',
+        color: '#f4d35e',
+        padding: '1.2rem 1rem 1.2rem 1rem',
+        boxShadow: '0 -4px 24px 0 rgba(0,0,0,0.17)',
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <span style={{ fontSize: '0.9rem', color: '#fff', marginRight: '0.7rem', flex: 1 }}>
         Utilizamos cookies propias y de terceros para analizar el tráfico y mostrar publicidad relevante. Al hacer clic en “Aceptar”, permites su uso. Consulta nuestra{' '}
         <a href="/privacidad" style={{ color: '#f4d35e', textDecoration: 'underline' }}>

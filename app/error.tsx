@@ -18,7 +18,7 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
   }, [error]);
 
   return (
-    <main className="main-style">
+    <main className="main-style" aria-label="Página de error global">
 
       {/* Main error headline */}
       <h1>¡Algo salió mal!</h1>
@@ -31,6 +31,7 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
         {/* Retry button calls the reset handler provided by Next.js */}
         <button
           onClick={() => reset()}
+          aria-label="Reintentar la acción"
           style={{
             padding: '1rem 2rem',
             borderRadius: '12px',
@@ -50,6 +51,7 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
         {/* Link back to homepage */}
         <Link
           href="/"
+          aria-label="Volver a la página principal"
           style={{
             padding: '1rem 2rem',
             borderRadius: '12px',

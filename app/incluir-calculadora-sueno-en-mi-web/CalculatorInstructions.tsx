@@ -144,7 +144,7 @@ export default function CalculatorInstructions() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main className="main-style">
+      <main className="main-style" aria-label="Instrucciones para añadir la Calculadora de Sueño a cualquir página web">
 
         {/* Title and Intro */}
         <h1>
@@ -171,6 +171,7 @@ export default function CalculatorInstructions() {
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '-2.7rem', marginRight: '0.6rem', zIndex: 1, position: 'relative' }}>
           <button
             onClick={handleCopy}
+            aria-label="Copiar el código HTML para insertar el widget"
             style={{
               background: '#f4d35e',
               color: '#181a30',
@@ -230,6 +231,7 @@ export default function CalculatorInstructions() {
             <a
               href="mailto:info@calculadoraciclosdesueno.com"
               className="email-link"
+              aria-label="Enviar correo a info@calculadoraciclosdesueno.com"
             >
               info@calculadoraciclosdesueno.com
             </a>

@@ -10,6 +10,7 @@ export default function ReturnButton() {
     <div style={{ marginTop: '2rem' }}>
       <Link
         href="/"
+        aria-label="Volver a la Calculadora de Sueño"
         style={{
           padding: '0.8rem 2rem',
           borderRadius: '12px',

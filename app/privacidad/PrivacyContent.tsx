@@ -40,7 +40,7 @@ export default function PrivacyContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyPageSchema) }}
       />
 
-      <main className="main-style">
+      <main className="main-style" aria-label="Política de Privacidad de la Calculadora de Sueño">
         <h1>
           Política de Privacidad
         </h1>
@@ -67,15 +67,15 @@ export default function PrivacyContent() {
           Estos proveedores pueden utilizar cookies y tecnologías similares para mostrar anuncios personalizados basados en tus intereses y visitas previas a este y otros sitios web.
           <br /><br />
           Google utiliza la cookie de DART para permitir la publicación de anuncios a nuestros usuarios basados en su visita a nuestro sitio y otros sitios en Internet.
-          Puedes obtener más información sobre cómo Google utiliza los datos aquí: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="cta-link">Política de privacidad de Google</a>.
+          Puedes obtener más información sobre cómo Google utiliza los datos aquí: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="cta-link" aria-label="Política de privacidad de Google (abre en nueva pestaña)">Política de privacidad de Google</a>.
           <br /><br />
-          Si prefieres desactivar la publicidad personalizada de Google, puedes hacerlo en: <a href="https://adssettings.google.com/authenticated" target="_blank" rel="noopener noreferrer" className="cta-link">Configuración de anuncios</a>.
+          Si prefieres desactivar la publicidad personalizada de Google, puedes hacerlo en: <a href="https://adssettings.google.com/authenticated" target="_blank" rel="noopener noreferrer" className="cta-link" aria-label="Configuración de anuncios de Google (abre en nueva pestaña)">Configuración de anuncios</a>.
         </p>
 
         <h2>4. Derechos de los Usuarios (GDPR / Europa)</h2>
         <p>
           Si resides en la Unión Europea, tienes derecho a acceder, rectificar, eliminar u oponerte al uso de tus datos personales.
-          Para ejercer estos derechos, escríbenos a <a href="mailto:info@calculadoraciclosdesueno.com" className="email-link">info@calculadoraciclosdesueno.com</a>.
+          Para ejercer estos derechos, escríbenos a <a href="mailto:info@calculadoraciclosdesueno.com" className="email-link" aria-label="Enviar correo a info@calculadoraciclosdesueno.com">info@calculadoraciclosdesueno.com</a>.
         </p>
 
         <h2>5. Retención de Datos</h2>

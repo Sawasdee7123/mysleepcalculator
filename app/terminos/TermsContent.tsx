@@ -39,7 +39,7 @@ export default function TermsContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(termsPageSchema) }}
       />
 
-      <main className="main-style">
+      <main className="main-style" aria-label="Términos y condiciones de la Calculadora de Sueño">
         <h1>
           Términos y Condiciones
         </h1>
@@ -80,7 +80,7 @@ export default function TermsContent() {
 
         <h2>7. Contacto</h2>
         <p>
-          Si tienes preguntas sobre estos términos y condiciones, puedes contactarnos en: <a href="mailto:info@calculadoraciclosdesueno.com" className="email-link">info@calculadoraciclosdesueno.com</a>
+          Si tienes preguntas sobre estos términos y condiciones, puedes contactarnos en: <a href="mailto:info@calculadoraciclosdesueno.com" className="email-link" aria-label="Enviar correo a info@calculadoraciclosdesueno.com">info@calculadoraciclosdesueno.com</a>
         </p>
 
         <ReturnButton />

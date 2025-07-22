@@ -104,7 +104,7 @@ export default function LearnContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main className="main-style">
+      <main className="main-style" aria-label="Contenido educativo sobre el sueño">
         <h1>
           Aprende a Dormir Mejor, Despierta Renovado
         </h1>

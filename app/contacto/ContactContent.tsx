@@ -42,7 +42,7 @@ export default function ContactContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
 
-      <main className="main-style">
+      <main className="main-style" aria-label="Página de contacto de la Calculadora de Sueño">
         <h1>Ponte en Contacto</h1>
 
         <p>
@@ -54,6 +54,7 @@ export default function ContactContent() {
           <a
             href="mailto:info@calculadoraciclosdesueno.com"
             className="email-link"
+            aria-label="Enviar correo a info@calculadoraciclosdesueno.com"
           >
             info@calculadoraciclosdesueno.com
           </a>
