@@ -201,7 +201,8 @@
   }
   .mobileNavLink:hover,
   .mobileNavLink:focus {
-    color: #f4d35e;
-    background: rgba(244, 211, 94, 0.10);
+    color: #f4d35e;                        /* Highlight in yellow */
+    background: rgba(244, 211, 94, 0.10);  /* Optional: subtle background */
+    text-decoration: underline;            /* <-- This adds the underline */
   }
 }

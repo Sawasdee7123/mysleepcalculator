@@ -1,8 +1,8 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 import styles from '../page.module.css';
 
 const NAV_LINKS = [
@@ -15,10 +15,26 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    function handleKeyDown(e) {
+      if (mobileOpen && e.key === "Escape") setMobileOpen(false);
+    }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [mobileOpen]);
 
   return (
     <header className={styles.headerWrapper}>
-      {/* Centered logo and title */}
       <div className={styles.brandContainer}>
         <Link href="/" className={styles.logoLink} aria-label="Ir a la página principal">
           <Image
@@ -29,20 +45,25 @@ export default function Header() {
             priority
             className={styles.logo}
           />
-          {/* Use h1 for SEO and branding, keep your original class */}
-          <h1 className={styles.title}>Calculadora de Sueño</h1>
+          <span className={styles.title}>Calculadora de Sueño</span>
         </Link>
       </div>
-      {/* Centered nav bar */}
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar} aria-label="Navegación principal">
         <ul className={styles.navLinks}>
-          {NAV_LINKS.map(link => (
-            <li key={link.href}>
-              <Link href={link.href} className={styles.navLink}>
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map(link => {
+            const isActive = pathname === link.href;
+            return (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`${styles.navLink} ${isActive ? styles.activeNavLink : ''}`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         {/* Hamburger for mobile */}
         <button
@@ -55,19 +76,26 @@ export default function Header() {
           <span className={styles.hamburger}></span>
         </button>
         {mobileOpen && (
-          <ul className={styles.mobileNavLinks}>
-            {NAV_LINKS.map(link => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={styles.mobileNavLink}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <>
+            <ul className={styles.mobileNavLinks} role="menu">
+              {NAV_LINKS.map(link => {
+                const isActive = pathname === link.href;
+                return (
+                  <li key={link.href} role="none">
+                    <Link
+                      href={link.href}
+                      className={`${styles.mobileNavLink} ${isActive ? styles.activeNavLink : ''}`}
+                      role="menuitem"
+                      aria-current={isActive ? "page" : undefined}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
         )}
       </nav>
     </header>

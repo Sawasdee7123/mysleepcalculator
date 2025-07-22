@@ -11,11 +11,16 @@ import SleepCalculator from "./components/SleepCalculator"; // Import the main S
  */
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className="main-style" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      {/* Main SEO-friendly H1 */}
+      <h1 className={styles.title}>
+        Calcula tus ciclos de sueño para despertar renovado
+      </h1>
+
       {/* Intro Paragraph */}
       <p className={styles.description}>
         Descubre a qué hora debes dormir o despertar para completar ciclos de sueño saludables.
-        Nuestra calculadora te ayuda a mejorar tu descanso y bienestar.
+        Nuestra calculadora de sueño te ayuda a mejorar tu descanso y bienestar.
       </p>
 
       {/* Sleep Calculator goes here */}

@@ -19,8 +19,8 @@ export default function CookieConsentBanner() {
     setVisible(false);
   };
 
-  // Decline cookies (still sets flag, disables tracking)
-  const handleDecline = () => {
+  // Close banner (counts as decline)
+  const handleClose = () => {
     localStorage.setItem(COOKIE_NAME, 'declined');
     setVisible(false);
     // TODO: Disable analytics/ads if you implement this logic
@@ -40,10 +40,13 @@ export default function CookieConsentBanner() {
       padding: '1.2rem 1rem 1.2rem 1rem',
       boxShadow: '0 -4px 24px 0 rgba(0,0,0,0.17)',
       textAlign: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      position: 'fixed'
     }}>
-      <span style={{ fontSize: '1rem', color: '#fff', marginRight: '0.7rem' }}>
-        Utilizamos cookies propias y de terceros para analizar el tráfico y mostrar publicidad relevante. Puedes aceptar o rechazar el uso de cookies no esenciales.
-        Consulta nuestra{' '}
+      <span style={{ fontSize: '0.9rem', color: '#fff', marginRight: '0.7rem', flex: 1 }}>
+        Utilizamos cookies propias y de terceros para analizar el tráfico y mostrar publicidad relevante. Al hacer clic en “Aceptar”, permites su uso. Consulta nuestra{' '}
         <a href="/privacidad" style={{ color: '#f4d35e', textDecoration: 'underline' }}>
           Política de Privacidad
         </a>.
@@ -65,19 +68,19 @@ export default function CookieConsentBanner() {
         Aceptar
       </button>
       <button
-        onClick={handleDecline}
+        onClick={handleClose}
+        aria-label="Cerrar"
         style={{
-          margin: '0 0.5rem',
-          padding: '0.5rem 1.1rem',
           background: 'transparent',
           color: '#f4d35e',
-          border: '1px solid #f4d35e',
-          borderRadius: '1.4rem',
-          fontWeight: 600,
+          border: 'none',
+          fontSize: '1.5rem',
+          marginLeft: '0.8rem',
           cursor: 'pointer',
+          lineHeight: 1,
         }}
       >
-        Rechazar
+        ×
       </button>
     </div>
   );
