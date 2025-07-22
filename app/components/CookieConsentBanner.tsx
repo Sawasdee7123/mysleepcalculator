@@ -43,7 +43,6 @@ export default function CookieConsentBanner() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      position: 'fixed'
     }}>
       <span style={{ fontSize: '0.9rem', color: '#fff', marginRight: '0.7rem', flex: 1 }}>
         Utilizamos cookies propias y de terceros para analizar el tráfico y mostrar publicidad relevante. Al hacer clic en “Aceptar”, permites su uso. Consulta nuestra{' '}
