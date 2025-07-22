@@ -138,21 +138,28 @@ function ShareLink({
   icon,
   hoverColor,
   title,
-  onClick
+  onClick,
+  target = '_blank',
+  rel = 'noopener noreferrer',
+  'aria-label': ariaLabel
 }: {
   href: string;
   icon: ReactNode;
   hoverColor: string;
   title: string;
   onClick: () => void;
+  target?: string;
+  rel?: string;
+  'aria-label'?: string;
 }) {
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={target}
+      rel={rel}
       title={title}
-      onClick={onClick}  // Track clicks
+      aria-label={ariaLabel}
+      onClick={onClick}
       style={{
         ...buttonStyle,
         backgroundColor: '#f4d35e',
@@ -165,6 +172,7 @@ function ShareLink({
     </a>
   );
 }
+
 
 // Common button style for all share buttons
 const buttonStyle = {
