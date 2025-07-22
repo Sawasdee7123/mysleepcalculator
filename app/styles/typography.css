@@ -89,12 +89,12 @@ li {
 .main-style {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1.2rem 5rem 1.2rem; /* Top, right, bottom, left */
   color: #f9f9f9; /* Or #fff if you want true white */
 }
 @media (max-width: 600px) {
   .main-style {
-    padding: 1rem;
+    padding: 1rem 1rem 4rem 1rem; /* Less padding on small screens */
   }
 }
 
