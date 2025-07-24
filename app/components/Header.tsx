@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { href: '/como-dormir-mejor', label: 'Cómo Dormir Mejor' },
   { href: '/incluir-calculadora-sueno-en-mi-web', label: 'Añadir la Calculadora en tu Web' },
   { href: '/about', label: 'Sobre Nosotros' },
-  { href: '/contacto', label: 'Contacto' },
 ];
 
 export default function Header() {
