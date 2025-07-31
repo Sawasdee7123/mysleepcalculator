@@ -238,6 +238,62 @@ export default function CalculatorInstructions() {
           </li>
         </ol>
 
+        {/* Preview Section */}
+        <h2 style={{ marginTop: '2.4rem' }}>Vista previa</h2>
+        <p>
+          Así es como se verá la calculadora en tu página web:
+        </p>
+        <div style={{
+          maxWidth: '410px',
+          width: '100%',
+          background: '#0c0c0c',
+          borderRadius: '28px',
+          margin: '0 auto'
+        }}>
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            paddingTop: '136.5%'
+          }}>
+            <iframe
+              src="https://calculadoraciclosdesueno.com/widget"
+              title="Calculadora de Sueño"
+              aria-label="Calculadora de Sueño"
+              loading="lazy"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                borderRadius: '28px',
+                background: '#0c0c0c'
+              }}
+              allowFullScreen
+            />
+          </div>
+        </div>
+        <p style={{
+          textAlign: 'center',
+          fontSize: '0.98rem',
+          marginTop: '0.6em'
+        }}>
+          <span style={{ color: '#454553' }}>Calculadora por</span>
+          {' '}
+          <a
+            href="https://calculadoraciclosdesueno.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: '#3578e5',
+              textDecoration: 'underline',
+              fontWeight: 500
+            }}
+          >
+            calculadoraciclosdesueno.com
+          </a>
+        </p>
+
         {/* FAQ Section */}
         <h2>
           Preguntas Frecuentes (FAQ)
