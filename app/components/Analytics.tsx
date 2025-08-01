@@ -33,10 +33,10 @@ export default function Analytics() {
       {/* Load the Google Analytics gtag.js library after the page becomes interactive */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-2E5EPY5LC5"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       {/* Inline script: initialize GA dataLayer and gtag config after interactive */}
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

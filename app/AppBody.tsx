@@ -4,7 +4,8 @@
 import { usePathname } from 'next/navigation';
 import StarBackground from './components/StarBackground';   // Animated starry background component
 import Footer from './components/Footer';   // Footer component
-import Analytics from './components/Analytics'; // Google Analytics injection/tracking
+import dynamic from 'next/dynamic';
+const Analytics = dynamic(() => import('./components/Analytics'), { ssr: false }); // Google Analytics injection/tracking
 
 /**
  * AppBody component
