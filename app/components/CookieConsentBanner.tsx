@@ -32,7 +32,7 @@ export default function CookieConsentBanner() {
     <div
       role="dialog"
       aria-live="polite"
-      aria-label="Aviso de uso de cookies"
+      aria-label="Cookie usage notice"
       style={{
         position: 'fixed',
         bottom: 0,
@@ -50,13 +50,14 @@ export default function CookieConsentBanner() {
       }}
     >
       <span style={{ fontSize: '0.9rem', color: '#fff', marginRight: '0.7rem', flex: 1 }}>
-        Utilizamos cookies propias y de terceros para analizar el tráfico y mostrar publicidad relevante. Al hacer clic en “Aceptar”, permites su uso. Consulta nuestra{' '}
-        <a href="/privacidad" style={{ color: '#f4d35e', textDecoration: 'underline' }}>
-          Política de Privacidad
+        We use our own and third-party cookies to analyze traffic and display relevant ads. By clicking "Accept", you consent to their use. See our{' '}
+        <a href="/privacy-policy" style={{ color: '#f4d35e', textDecoration: 'underline' }}>
+          Privacy Policy
         </a>.
       </span>
       <button
         onClick={handleAccept}
+        aria-label="Accept cookies"
         style={{
           margin: '0 0.5rem',
           padding: '0.5rem 1.1rem',
@@ -69,11 +70,11 @@ export default function CookieConsentBanner() {
           boxShadow: '0 2px 12px rgba(244,211,94,0.18)'
         }}
       >
-        Aceptar
+        Accept
       </button>
       <button
         onClick={handleClose}
-        aria-label="Cerrar"
+        aria-label="Close"
         style={{
           background: 'transparent',
           color: '#f4d35e',

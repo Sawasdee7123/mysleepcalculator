@@ -15,20 +15,20 @@ export default function Footer() {
         fontSize: '1rem',
       }}
     >
-      <nav aria-label="Pie de página">
+      <nav aria-label="Footer">
         <div className="footer-columns">
           <div className="footer-col">
-            <div className="footer-title">Web</div>
-            <Link href="/" style={footerLink}>Calculadora</Link>
-            <Link href="/como-dormir-mejor" style={footerLink}>Cómo Dormir Mejor</Link>
-            <Link href="/incluir-calculadora-sueno-en-mi-web" style={footerLink}>Añadir la Calculadora</Link>
-            <Link href="/about" style={footerLink}>Sobre Nosotros</Link>
+            <div className="footer-title">Site</div>
+            <Link href="/" style={footerLink}>Calculator</Link>
+            <Link href="/learn-to-sleep-better" style={footerLink}>Learn to Sleep Better</Link>
+            <Link href="/embed-sleep-calculator" style={footerLink}>Add the Calculator to Your Site</Link>
+            <Link href="/about" style={footerLink}>About Us</Link>
           </div>
           <div className="footer-col">
             <div className="footer-title">Legal</div>
-            <Link href="/privacidad" style={footerLink}>Privacidad</Link>
-            <Link href="/terminos" style={footerLink}>Términos y Condiciones</Link>
-            <Link href="/contacto" style={footerLink}>Contacto</Link>
+            <Link href="/privacy-policy" style={footerLink}>Privacy Policy</Link>
+            <Link href="/terms-and-conditions" style={footerLink}>Terms & Conditions</Link>
+            <Link href="/contact" style={footerLink}>Contact</Link>
           </div>
         </div>
       </nav>
@@ -39,7 +39,7 @@ export default function Footer() {
         textAlign: 'center',
         marginTop: '0.7rem'
       }}>
-        © 2025 Calculadora de Sueño
+        © 2025 Sleep Calculator
       </small>
       <style jsx>{`
         .footer-columns {

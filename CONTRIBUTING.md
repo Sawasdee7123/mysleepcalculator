@@ -1,21 +1,21 @@
-# Guía de Contribución
+# Contribution Guide
 
-¡Gracias por tu interés en mejorar este proyecto!
+Thank you for your interest in improving this project!
 
-Actualmente, **no se aceptan contribuciones directas** (pull requests) en este repositorio. Si tienes una sugerencia, encuentras un error, o deseas proponer una mejora, por favor abre un *Issue* describiendo claramente tu propuesta.
+Currently, **direct contributions (pull requests) are not accepted** in this repository. If you have a suggestion, find a bug, or want to propose an improvement, please open an *Issue* with a clear description of your idea.
 
-Cualquier reporte de bug, consulta o comentario es bienvenido para ayudar a mejorar la calidad de la calculadora para toda la comunidad.
+Any bug report, question, or comment is welcome to help improve the quality of the calculator for the entire community.
 
-## ¿Cómo reportar un problema?
+## How to Report a Problem
 
-1. Ve a la pestaña “Issues” en este repositorio.
-2. Haz clic en “New Issue”.
-3. Describe el problema, incluyendo los pasos para reproducirlo si corresponde.
+1. Go to the “Issues” tab in this repository.
+2. Click on “New Issue”.
+3. Clearly describe the problem, including steps to reproduce it if applicable.
 
-## Código de Conducta
+## Code of Conduct
 
-Por favor, mantén el respeto y la cortesía en todas las interacciones. Consulta el [Código de Conducta](./CODE_OF_CONDUCT.md) para más detalles.
+Please maintain respect and courtesy in all interactions. See the [Code of Conduct](./CODE_OF_CONDUCT.md) for more details.
 
 ---
 
-**Gracias por contribuir al bienestar digital!**
+**Thank you for contributing to digital well-being!**

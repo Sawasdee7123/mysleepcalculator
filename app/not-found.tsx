@@ -5,8 +5,8 @@ import { Metadata } from 'next';
 
 // Static metadata for SEO and browser tab
 export const metadata: Metadata = {
-  title: 'Página no encontrada - Calculadora de Sueño',
-  description: 'La página que buscas no existe. Vuelve a la página principal de la Calculadora de Sueño.',
+  title: 'Page Not Found - Sleep Calculator',
+  description: 'The page you are looking for does not exist. Go back to the Sleep Calculator homepage.',
 };
 
 /**
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
   return (
     <main
-      aria-label="Página no encontrada"
+      aria-label="Page not found"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -38,10 +38,10 @@ export default function NotFoundPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Página no encontrada",
-            "description": "Página 404 personalizada de Calculadora de Sueño",
-            "url": "https://calculadoraciclosdesueno.com/404",
-            "inLanguage": "es",
+            "name": "Page Not Found",
+            "description": "Custom 404 page of Sleep Calculator",
+            "url": "https://mysleepcalculator.net/404",
+            "inLanguage": "en",
           }),
         }}
       />
@@ -50,12 +50,12 @@ export default function NotFoundPage() {
       <h1>404</h1>
       {/* User-friendly message */}
       <p>
-        Oops... No hemos podido encontrar la página que buscas.
+        Oops... We couldn’t find the page you were looking for.
       </p>
       {/* Button to go back to homepage */}
       <Link
         href="/"
-        aria-label="Volver a la página principal"
+        aria-label="Back to homepage"
         style={{
           padding: '1rem 2rem',
           borderRadius: '12px',
@@ -67,7 +67,7 @@ export default function NotFoundPage() {
           boxShadow: '0 4px 18px 0 #f4d35e33',
         }}
       >
-        ← Volver a la página principal
+        ← Back to Homepage
       </Link>
     </main>
   );

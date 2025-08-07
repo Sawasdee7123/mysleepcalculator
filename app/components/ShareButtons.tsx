@@ -11,10 +11,10 @@ import { ReactNode } from 'react';
 import { trackEvent } from './Analytics';
 
 // The URL to share (your site homepage)
-const SHARE_URL = 'https://calculadoraciclosdesueno.com';
+const SHARE_URL = 'https://mysleepcalculator.net';
 // Pre-encoded values for including in share links
 const encodedUrl = encodeURIComponent(SHARE_URL);
-const encodedText = encodeURIComponent('¡Calcula tus ciclos de sueño aquí!');
+const encodedText = encodeURIComponent('Calculate your sleep cycles here!');
 
 /**
  * ShareButtons component
@@ -35,7 +35,7 @@ export default function ShareButtons() {
     } catch (error) {
       // Fallback: prompt user to manually copy if clipboard API fails
       window.prompt(
-        "No se pudo copiar automáticamente. Por favor, copia el enlace:",
+        'Could not copy automatically. Please copy the link manually:',
         SHARE_URL
       );
     }
@@ -44,7 +44,9 @@ export default function ShareButtons() {
 
   return (
     <div style={{ marginTop: '1rem', textAlign: 'center', position: 'relative' }}>
-      <p style={{ marginBottom: '0.8rem', fontWeight: 'bold', fontSize: '1rem' }}>Ayuda a otros a descansar mejor compartiéndolo:</p>
+      <p style={{ marginBottom: '0.8rem', fontWeight: 'bold', fontSize: '1rem' }}>
+        Help others sleep better by sharing:
+      </p>
 
       {/* Social and copy buttons */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: '0.9rem', flexWrap: 'wrap' }}>
@@ -56,8 +58,8 @@ export default function ShareButtons() {
           rel="noopener noreferrer"
           icon={<FaWhatsapp />}
           hoverColor="#25D366"
-          title="Compartir en WhatsApp"
-          aria-label="Compartir en WhatsApp"
+          title="Share on WhatsApp"
+          aria-label="Share on WhatsApp"
           onClick={() => trackEvent('share', 'share_click', 'WhatsApp')}
         />
 
@@ -68,8 +70,8 @@ export default function ShareButtons() {
           rel="noopener noreferrer"
           icon={<FaTelegramPlane />}
           hoverColor="#0088cc"
-          title="Compartir en Telegram"
-          aria-label="Compartir en Telegram"
+          title="Share on Telegram"
+          aria-label="Share on Telegram"
           onClick={() => trackEvent('share', 'share_click', 'Telegram')}
         />
 
@@ -80,8 +82,8 @@ export default function ShareButtons() {
           rel="noopener noreferrer"
           icon={<SiX />}
           hoverColor="#000000"
-          title="Compartir en X"
-          aria-label="Compartir en X"
+          title="Share on X"
+          aria-label="Share on X"
           onClick={() => trackEvent('share', 'share_click', 'X')}
         />
 
@@ -92,15 +94,15 @@ export default function ShareButtons() {
           rel="noopener noreferrer"
           icon={<FaFacebookF />}
           hoverColor="#3b5998"
-          title="Compartir en Facebook"
-          aria-label="Compartir en Facebook"
+          title="Share on Facebook"
+          aria-label="Share on Facebook"
           onClick={() => trackEvent('share', 'share_click', 'Facebook')}
         />
 
         {/* Copy Link */}
         <button
-          title="Copiar enlace"
-          aria-label="Copiar enlace"
+          title="Copy link"
+          aria-label="Copy link"
           onClick={() => {
             handleCopy();
             trackEvent('share', 'share_click', 'CopyLink');
@@ -120,7 +122,7 @@ export default function ShareButtons() {
       {/* Popup message when link is copied */}
       {copied && (
         <div style={popupStyle} role="status" aria-live="polite">
-          ¡Enlace copiado!
+          Link copied!
         </div>
       )}
     </div>

@@ -8,10 +8,10 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 
 const NAV_LINKS = [
-  { href: '/', label: 'Calculadora' },
-  { href: '/como-dormir-mejor', label: 'Cómo Dormir Mejor' },
-  { href: '/incluir-calculadora-sueno-en-mi-web', label: 'Añadir la Calculadora en tu Web' },
-  { href: '/about', label: 'Sobre Nosotros' },
+  { href: '/', label: 'Calculator' },
+  { href: '/learn-to-sleep-better', label: 'Learn to Sleep Better' },
+  { href: '/embed-sleep-calculator', label: 'Add the Calculator to Your Site' },
+  { href: '/about', label: 'About Us' },
 ];
 
 export default function Header() {
@@ -38,20 +38,20 @@ export default function Header() {
     <div style={{ position: 'relative' }}>
       <header className={styles.headerWrapper}>
         <div className={styles.brandContainer}>
-          <Link href="/" className={styles.logoLink} aria-label="Ir a la página principal">
+          <Link href="/" className={styles.logoLink} aria-label="Go to homepage">
             <Image
               src="/logo.png"
-              alt="Logo de la Calculadora de Sueño"
+              alt="Sleep Calculator Logo"
               width={96}
               height={96}
               priority
               className={styles.logo}
             />
-            <span className={styles.title}>Calculadora de Sueño</span>
+            <span className={styles.title}>Sleep Calculator</span>
           </Link>
         </div>
 
-        <nav className={styles.navbar} aria-label="Navegación principal">
+        <nav className={styles.navbar} aria-label="Main navigation">
           <div className={styles.navWithLang}>
             <ul className={styles.navLinks}>
               {NAV_LINKS.map(link => {
@@ -83,7 +83,7 @@ export default function Header() {
 
             <button
               className={styles.mobileMenuButton}
-              aria-label="Menú"
+              aria-label="Menu"
               onClick={() => setMobileOpen(o => !o)}
             >
               <span className={styles.hamburger}></span>

@@ -6,37 +6,37 @@ import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros | Calculadora de Sueño',
-  description: 'Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.',
+  title: 'About Us | Sleep Calculator',
+  description: 'Meet the team behind the Sleep Calculator. Learn why we created this free tool and how it can help you improve your sleep.',
 
   openGraph: {
-    title: 'Sobre Nosotros | Calculadora de Sueño',
-    description: 'Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.',
-    url: 'https://calculadoraciclosdesueno.com/about',
+    title: 'About Us | Sleep Calculator',
+    description: 'Meet the team behind the Sleep Calculator. Learn why we created this free tool and how it can help you improve your sleep.',
+    url: 'https://mysleepcalculator.net/about',
     images: [
       {
-        url: 'https://calculadoraciclosdesueno.com/og-image.png',
+        url: 'https://mysleepcalculator.net/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Calculadora de Sueño',
+        alt: 'Sleep Calculator',
       },
     ],
-    siteName: 'Calculadora de Sueño',
+    siteName: 'Sleep Calculator',
     type: 'website',
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Sobre Nosotros | Calculadora de Sueño',
-    description: 'Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.',
-    images: ['https://calculadoraciclosdesueno.com/og-image.png'],
+    title: 'About Us | Sleep Calculator',
+    description: 'Meet the team behind the Sleep Calculator. Learn why we created this free tool and how it can help you improve your sleep.',
+    images: ['https://mysleepcalculator.net/og-image.png'],
   },
 
   alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/about',
+    canonical: 'https://mysleepcalculator.net/about',
     languages: {
-      es: 'https://calculadoraciclosdesueno.com/about',
       en: 'https://mysleepcalculator.net/about',
+      es: 'https://calculadoraciclosdesueno.com/about',
     },
   },
 };

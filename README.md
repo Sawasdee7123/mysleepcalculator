@@ -1,41 +1,41 @@
-# Calculadora de Sueño
+# Sleep Calculator
 
-**Calculadora de Sueño** es una herramienta gratuita y fácil de usar que te ayuda a descubrir la mejor hora para dormir o despertarte, basándose en ciclos naturales de sueño de 90 minutos. Optimiza tu descanso, despiértate renovado y mejora tu salud del sueño con solo un clic.
+**Sleep Calculator** is a free, easy-to-use tool that helps you find the best time to go to sleep or wake up, based on natural 90-minute sleep cycles. Optimize your rest, wake up refreshed, and improve your sleep health with just one click.
 
-Accede a la calculadora en: [https://calculadoraciclosdesueno.com](https://calculadoraciclosdesueno.com)
-
----
-
-## Características principales
-
-- 100% gratuita y en español
-- Calcula la mejor hora para dormir o despertar
-- Basada en ciclos de sueño naturales
-- Totalmente responsive (funciona en móvil, tablet y PC)
-- Widget fácil de integrar en cualquier sitio web o blog
-- Sin necesidad de registro
+Try the calculator here: [https://mysleepcalculator.net](https://mysleepcalculator.net)
 
 ---
 
-## Vista previa
+## Key Features
 
-![Vista previa de la Calculadora de Sueño](public/screenshot.png)
+- 100% free and in English
+- Calculates the best time to sleep or wake up
+- Based on natural sleep cycles
+- Fully responsive (works on mobile, tablet, and desktop)
+- Easy-to-integrate widget for any website or blog
+- No registration required
 
 ---
 
-## Cómo Integrar la Calculadora en tu Sitio Web
+## Preview
 
-Integra fácilmente nuestra calculadora en tu blog o página web copiando el siguiente código embed. Esto permitirá a tus visitantes calcular sus ciclos de sueño directamente desde tu sitio.
+![Preview of the Sleep Calculator](public/screenshot.png)
 
-### Código Embed:
+---
+
+## How to Embed the Calculator on Your Website
+
+Easily add our calculator to your blog or website by copying the embed code below. This allows your visitors to calculate their sleep cycles directly from your page.
+
+### Embed Code:
 
 ```html
 <div style="max-width:410px; width:100%; background:#0c0c0c; border-radius:28px; margin:0 auto;">
   <div style="position:relative; width:100%; padding-top:136.5%;">
     <iframe
-      src="https://calculadoraciclosdesueno.com/widget"
-      title="Calculadora de Sueño"
-      aria-label="Calculadora de Sueño"
+      src="https://mysleepcalculator.net/widget"
+      title="Sleep Calculator"
+      aria-label="Sleep Calculator"
       loading="lazy"
       style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:28px; background:#0c0c0c;"
       allowfullscreen
@@ -43,9 +43,9 @@ Integra fácilmente nuestra calculadora en tu blog o página web copiando el sig
   </div>
 </div>
 <p style="text-align:center; font-size:0.98rem; margin-top:0.6em;">
-  <span style="color:#454553;">Calculadora por</span>
-  <a href="https://calculadoraciclosdesueno.com/" target="_blank" rel="noopener noreferrer"
+  <span style="color:#454553;">Calculator by</span>
+  <a href="https://mysleepcalculator.net/" target="_blank" rel="noopener noreferrer"
      style="color:#3578e5; text-decoration:underline; font-weight:500;">
-    calculadoraciclosdesueno.com
+    mysleepcalculator.net
   </a>
 </p>

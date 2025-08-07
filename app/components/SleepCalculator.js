@@ -32,13 +32,13 @@ const periods = ["AM", "PM"];
 
 // Calculator modes: waking up or going to bed
 const MODES = [
-  { key: "wake", label: "Despertar" },
-  { key: "sleep", label: "Acostar" }
+  { key: "wake", label: "Wake Up" },
+  { key: "sleep", label: "Go to Bed" }
 ];
 
 /**
  * SleepCalculator component
- * - Allows user to select a time and mode (wake/acostar)
+ * - Allows user to select a time and mode (wake/sleep)
  * - Calculates and displays optimal bed/wake times for healthy sleep cycles
  * - Integrates social share buttons and Google Analytics tracking
  * - Responsive and accessible design with smooth UI transitions
@@ -65,7 +65,7 @@ export default function SleepCalculator({ showAttribution = false }) {
     selectedTime.setHours(to24Hour(hour, period), parseInt(minute, 10), 0, 0);
 
     if (mode === "wake") {
-      // Despertarte: count backwards from wake-up time
+      // Wake up: count backwards from wake-up time
       let t = new Date(selectedTime.getTime());
       t.setMinutes(t.getMinutes() - 15); // Step 1: Subtract 15 min to fall asleep
       for (let i = 0; i < cycles; i++) {
@@ -73,7 +73,7 @@ export default function SleepCalculator({ showAttribution = false }) {
         options.unshift(formatTime(new Date(t.getTime())));
       }
     } else {
-      // Acostarte: count forwards from bedtime
+      // Go to bed: count forwards from bedtime
       let t = new Date(selectedTime.getTime());
       t.setMinutes(t.getMinutes() + 15); // Step 1: Add 15 min to fall asleep
       for (let i = 0; i < cycles; i++) {
@@ -110,20 +110,20 @@ export default function SleepCalculator({ showAttribution = false }) {
 
   // Texts for headings and helper info
   const headings = {
-    wake: "Hora para Acostarte",
-    sleep: "Hora para Despertarte"
+    wake: "When to Go to Bed",
+    sleep: "When to Wake Up"
   };
   const infoLines = {
     wake: [
-      "El tiempo promedio para conciliar el sueño es de unos 15 minutos.",
-      `Para despertar a las ${resultTime}, deberías acostarte a una de estas horas:`
+      "The average time to fall asleep is about 15 minutes.",
+      `To wake up at ${resultTime}, you should go to bed at one of these times:`
     ],
     sleep: [
-      "El tiempo promedio para conciliar el sueño es de unos 15 minutos.",
-      `Acostándote a las ${resultTime}, podrías despertarte a una de estas horas:`
+      "The average time to fall asleep is about 15 minutes.",
+      `Going to bed at ${resultTime}, you could wake up at one of these times:`
     ]
   };
-  const bottomLine = "Un buen descanso consiste en 5-6 ciclos de sueño completos.";
+  const bottomLine = "Good rest consists of 5-6 complete sleep cycles.";
 
   // Indices for which times to highlight (typically first two, e.g. best options)
   const suggestedIdx = [0, 1];
@@ -159,7 +159,7 @@ export default function SleepCalculator({ showAttribution = false }) {
           textAlign: "center",
           letterSpacing: "0.3px"
         }}>
-          ¿A qué hora te quieres...?
+          What time do you want to...?
         </div>
         {/* Mode Toggle Chips */}
         <div style={{
@@ -175,7 +175,7 @@ export default function SleepCalculator({ showAttribution = false }) {
               key={opt.key}
               type="button"
               aria-pressed={mode === opt.key}
-              aria-label={`Seleccionar modo: ${opt.label}`}
+              aria-label={`Select mode: ${opt.label}`}
               onClick={() => {
                 setMode(opt.key);
                 if (opt.key === "wake") {
@@ -241,7 +241,7 @@ export default function SleepCalculator({ showAttribution = false }) {
         >
           {/* Visually hidden labels for accessibility */}
           <label htmlFor="hour" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
-            Hora
+            Hour
           </label>
           <select
             id="hour"
@@ -281,7 +281,7 @@ export default function SleepCalculator({ showAttribution = false }) {
             :
           </span>
           <label htmlFor="minute" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
-            Minutos
+            Minutes
           </label>
           <select
             id="minute"
@@ -310,7 +310,7 @@ export default function SleepCalculator({ showAttribution = false }) {
             {minutes.map(m => <option key={m} value={m}>{m}</option>)}
           </select>
           <label htmlFor="period" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
-            AM o PM
+            AM or PM
           </label>
           <select
             id="period"
@@ -359,13 +359,13 @@ export default function SleepCalculator({ showAttribution = false }) {
             }}
             onClick={handleCalculate}
           >
-            Calcular la Hora
+            Calculate Time
           </button>
         </div>
       </div>
 
       {/* ---- Results Card ---- */}
-      <div style={resultTransition} role="region" aria-live="polite" aria-label="Resultados de la Calculadora de Sueño">
+      <div style={resultTransition} role="region" aria-live="polite" aria-label="Sleep Calculator Results">
         {/* Results heading */}
         <div style={{
           textAlign: "center",
@@ -434,8 +434,8 @@ export default function SleepCalculator({ showAttribution = false }) {
         }}>
           <div style={{ marginBottom: "0.375em" }}>
             {mode === "wake"
-              ? "Si te acuestas a estas horas, podrás completar ciclos de sueño de 90 minutos."
-              : "Si te despiertas a estas horas, habrás dormido varios ciclos completos de 90 minutos."}
+              ? "If you go to bed at these times, you'll be able to complete 90-minute sleep cycles."
+              : "If you wake up at these times, you'll have slept several complete 90-minute cycles."}
           </div>
           <div>
             {bottomLine}
@@ -466,7 +466,7 @@ export default function SleepCalculator({ showAttribution = false }) {
               transition: "filter 0.16s"
             }}
           >
-            ← Volver
+            ← Back
           </button>
         </div>
       </div>

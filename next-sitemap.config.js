@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://calculadoraciclosdesueno.com',
+  siteUrl: 'https://mysleepcalculator.net',
   generateRobotsTxt: true, // Generate robots.txt
   sitemapSize: 5000,
 };

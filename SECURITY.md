@@ -1,15 +1,15 @@
-# Política de Seguridad
+# Security Policy
 
-## Reporte de vulnerabilidades
+## Vulnerability Reporting
 
-Si encuentras una vulnerabilidad de seguridad en este proyecto, **por favor repórtala responsablemente** siguiendo estos pasos:
+If you discover a security vulnerability in this project, please report it responsibly by following these steps:
 
-1. No publiques detalles de la vulnerabilidad públicamente en un *Issue*.
-2. Contacta directamente al responsable del repositorio a través de un *Issue* marcado como “Security” o mediante un mensaje privado (si tienes esa opción en GitHub).
-3. Describe detalladamente el problema, incluyendo instrucciones para reproducirlo.
+1. Do not publicly disclose vulnerability details in an *Issue*.
+2. Contact the repository maintainer directly through an *Issue* marked as "Security" or via private message (if available on GitHub).
+3. Provide a detailed description of the issue, including step-by-step reproduction instructions.
 
-Nos comprometemos a investigar y solucionar cualquier reporte de seguridad tan pronto como sea posible para proteger a los usuarios del proyecto.
+We are committed to investigating and resolving any security reports as quickly as possible to protect our users.
 
 ---
 
-**Gracias por contribuir a la seguridad de la comunidad!**
+**Thank you for helping keep the community safe!**

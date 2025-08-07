@@ -9,17 +9,17 @@ import { Fragment } from 'react';
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "name": "Contacto",
-  "url": "https://calculadoraciclosdesueno.com/contacto",
-  "about": "Página de contacto del proyecto Calculadora de Sueño",
-  "inLanguage": "es",
+  "name": "Contact",
+  "url": "https://mysleepcalculator.net/contact",
+  "about": "Contact page for the Sleep Calculator project",
+  "inLanguage": "en",
   "mainEntity": {
     "@type": "Organization",
-    "name": "Calculadora de Sueño",
-    "url": "https://calculadoraciclosdesueno.com/",
+    "name": "Sleep Calculator",
+    "url": "https://mysleepcalculator.net/",
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "info@calculadoraciclosdesueno.com",
+      "email": "info@mysleepcalculator.net",
       "contactType": "Customer Support",
       "availableLanguage": ["es", "en"]
     }
@@ -43,26 +43,26 @@ export default function ContactContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
 
-      <main className="main-style" aria-label="Página de contacto de la Calculadora de Sueño">
-        <h1>Ponte en Contacto</h1>
+      <main className="main-style" aria-label="Contact page for the Sleep Calculator">
+        <h1>Get in Touch</h1>
 
         <p>
-          ¿Tienes dudas, comentarios o sugerencias? Estaremos encantados de escucharte.
+          Have questions, feedback, or suggestions? We'd love to hear from you.
         </p>
 
         <p>
-          Puedes escribirnos directamente a:{' '}
+          You can email us directly at:{' '}
           <a
-            href="mailto:info@calculadoraciclosdesueno.com"
+            href="mailto:info@mysleepcalculator.net"
             className="email-link"
-            aria-label="Enviar correo a info@calculadoraciclosdesueno.com"
+            aria-label="Send email to info@mysleepcalculator.net"
           >
-            info@calculadoraciclosdesueno.com
+            info@mysleepcalculator.net
           </a>
         </p>
 
         <p>
-          Normalmente respondemos en menos de 48 horas.
+          We usually respond within 48 hours.
         </p>
       </main>
 

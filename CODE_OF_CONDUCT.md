@@ -1,37 +1,37 @@
-# Código de Conducta
+# Code of Conduct
 
-Como miembros, colaboradores y líderes de este proyecto, y con el fin de fomentar una comunidad abierta y acogedora, nos comprometemos a hacer de la participación en nuestro proyecto y nuestra comunidad una experiencia libre de acoso para todos, independientemente de la edad, tamaño corporal, discapacidad visible o invisible, etnia, características sexuales, identidad y expresión de género, nivel de experiencia, educación, estatus socioeconómico, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.
+As members, contributors, and leaders of this project, and in the interest of fostering an open and welcoming community, we pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socioeconomic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-## Nuestros estándares
+## Our Standards
 
-Ejemplos de comportamiento que contribuyen a crear un ambiente positivo incluyen:
+Examples of behavior that contributes to creating a positive environment include:
 
-- Usar un lenguaje amable e inclusivo
-- Respetar diferentes puntos de vista y experiencias
-- Aceptar críticas constructivas con gracia
-- Centrarse en lo que es mejor para la comunidad
-- Mostrar empatía hacia otros miembros
+- Using welcoming and inclusive language
+- Respecting different viewpoints and experiences
+- Accepting constructive criticism gracefully
+- Focusing on what is best for the community
+- Showing empathy toward other community members
 
-Ejemplos de comportamiento inaceptable por parte de los participantes incluyen:
+Examples of unacceptable behavior by participants include:
 
-- Uso de lenguaje o imágenes sexualizadas y atención o avances sexuales no deseados
-- Trolleo, comentarios insultantes o despectivos y ataques personales o políticos
-- Acoso público o privado
-- Publicación de información privada de otras personas, como direcciones físicas o electrónicas, sin permiso explícito
-- Otras conductas que puedan considerarse inapropiadas en un entorno profesional
+- The use of sexualized language or imagery and unwelcome sexual attention or advances
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others’ private information, such as physical or email addresses, without explicit permission
+- Other conduct which could reasonably be considered inappropriate in a professional setting
 
-## Responsabilidades de la comunidad
+## Community Responsibilities
 
-Los líderes del proyecto son responsables de aclarar los estándares de comportamiento y tomarán acciones correctivas apropiadas y justas en respuesta a cualquier instancia de comportamiento que consideren inapropiado, amenazante, ofensivo o perjudicial.
+Project maintainers are responsible for clarifying standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
 
-## Ámbito
+## Scope
 
-Este código de conducta se aplica dentro de todos los espacios del proyecto y también se aplica cuando una persona representa oficialmente el proyecto en espacios públicos.
+This Code of Conduct applies within all project spaces and also applies when an individual is officially representing the project in public spaces.
 
-## Aplicación
+## Enforcement
 
-Casos de comportamiento abusivo, acosador o inaceptable pueden ser reportados abriendo un *Issue* en el repositorio o contactando al responsable a través de GitHub.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an *Issue* in the repository or contacting the maintainer through GitHub.
 
 ---
 
-Basado en el [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md), versión 2.1.
+Based on the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md), version 2.1.

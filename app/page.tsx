@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main
       className="main-style"
-      aria-label="Página principal de la Calculadora de Sueño"
+      aria-label="Sleep Calculator Home Page"
       style={{
         textAlign: "center",
         display: "flex",
@@ -23,13 +23,13 @@ export default function Home() {
     >
       {/* Main SEO-friendly H1 */}
       <h1 className={styles.title}>
-        Calcula tus ciclos de sueño para despertar renovado
+        Calculate Your Sleep Cycles to Wake Up Refreshed
       </h1>
 
       {/* Intro Paragraph */}
       <p className={styles.description}>
-        Descubre a qué hora debes dormir o despertar para completar ciclos de sueño saludables.
-        Nuestra calculadora de sueño te ayuda a mejorar tu descanso y bienestar.
+        Find out the best time to sleep or wake up to complete healthy sleep cycles.
+        Our sleep calculator helps improve your rest and overall well-being.
       </p>
 
       {/* Sleep Calculator goes here */}

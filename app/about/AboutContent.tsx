@@ -12,25 +12,25 @@ import ReturnButton from '@/app/components/ReturnButton';
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "name": "Sobre Nosotros",
-  "url": "https://calculadoraciclosdesueno.com/about",
-  "description": "Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.",
-  "inLanguage": "es",
+  "name": "About Us",
+  "url": "https://mysleepcalculator.net/about",
+  "description": "Meet the team behind the Sleep Calculator. Learn why we created this free tool and how it can help you improve your sleep.",
+  "inLanguage": "en",
   "mainEntity": {
     "@type": "WebSite",
-    "name": "Calculadora de Sueño",
-    "url": "https://calculadoraciclosdesueno.com/",
-    "inLanguage": "es",
+    "name": "Sleep Calculator",
+    "url": "https://mysleepcalculator.net/",
+    "inLanguage": "en",
     "creator": {
       "@type": "Person",
-      "name": "Equipo de Calculadora de Sueño"
+      "name": "Sleep Calculator Team"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Calculadora de Sueño",
+      "name": "Sleep Calculator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://calculadoraciclosdesueno.com/logo.png"
+        "url": "https://mysleepcalculator.net/logo.png"
       }
     }
   }
@@ -54,34 +54,34 @@ export default function AboutContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
       />
 
-      <main className="main-style" aria-label="Contenido Sobre Nosotros">
+      <main className="main-style" aria-label="About Us Content">
         <h1>
-          Sobre Nosotros
+          About Us
         </h1>
 
         <p>
-          La <strong>Calculadora de Sueño</strong> fue creada con un propósito simple:
-          ayudarte a despertar sintiéndote renovado. Muchas veces, no es cuestión de dormir más horas,
-          sino de despertar en el momento adecuado del ciclo de sueño.
+          The <strong>Sleep Calculator</strong> was created with a simple goal:
+          helping you wake up feeling refreshed. Often, it's not about sleeping more hours,
+          it's about waking up at the right point in your sleep cycle.
         </p>
 
         <p>
-          Esta herramienta es para cualquier persona que quiera mejorar su descanso, desde estudiantes hasta profesionales,
-          padres o simplemente quienes desean optimizar su rutina de sueño de forma fácil y gratuita.
+          This tool is for anyone who wants to improve their rest; students, professionals,
+          parents, or anyone looking to optimize their sleep routine in a quick and free way.
         </p>
 
         <p>
-          Este proyecto fue desarrollado por un emprendedor independiente apasionado por el bienestar y la tecnología.
-          Nuestra misión es ofrecer herramientas prácticas, sin coste, que realmente puedan mejorar tu día a día.
+          This project was developed by an independent entrepreneur passionate about wellness and technology.
+          Our mission is to offer practical, no-cost tools that can truly improve your day-to-day life.
         </p>
 
         <p>
-          La calculadora se basa en datos promedio del ciclo de sueño humano (~90 minutos por ciclo).
-          Aunque cada persona es diferente, esta herramienta ofrece una excelente base para planificar tus horarios de sueño.
+          The calculator is based on average human sleep cycle data (~90 minutes per cycle).
+          While everyone is different, this tool provides a great foundation to plan your sleep schedule.
         </p>
 
         <p>
-          Pruébala y empieza a transformar tu descanso desde hoy.{' '}
+          Try it out and start improving your rest today.{' '}
         </p>
 
         <ReturnButton />

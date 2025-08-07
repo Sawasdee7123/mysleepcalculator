@@ -3,8 +3,8 @@ import WidgetClient from './WidgetClient';
 
 // Static metadata for SEO and search engine control (prevents indexing, sets canonical, etc.)
 export const metadata = {
-  title: 'Calculadora de Sueño - Widget',
-  description: 'Calculadora embebible para ayudarte a planificar tus ciclos de sueño.',
+  title: 'Sleep Calculator - Widget',
+  description: 'Embeddable sleep calculator to help you plan your sleep cycles.',
   robots: {
     index: false,   // Don't index this widget page
     follow: true,   // Allow following links
@@ -19,7 +19,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/', // Canonical points to main site
+    canonical: 'https://mysleepcalculator.net/', // Canonical points to main site
   },
 };
 

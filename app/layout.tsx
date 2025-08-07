@@ -29,8 +29,8 @@ const playfair = Playfair_Display({
 
 // Static metadata for SEO and browser tab
 export const metadata: Metadata = {
-  title: 'Calculadora de Sueño | Descubre tu Hora Ideal para Dormir y Despertar',
-  description: 'Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar. Mejora tu descanso y bienestar con horarios de sueño personalizados.',
+  title: 'Sleep Calculator | Find Your Ideal Time to Sleep and Wake Up',
+  description: 'Use our Sleep Calculator to discover the best times to go to bed and wake up. Improve your sleep and well-being with personalized sleep timing.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -39,40 +39,36 @@ export const metadata: Metadata = {
 
   openGraph: {
     // Open Graph data for social link previews
-    title: 'Calculadora de Sueño | Descubre tu Hora Ideal para Dormir y Despertar',
-    description: 'Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar. Mejora tu descanso y bienestar con horarios de sueño personalizados.',
-    url: 'https://calculadoraciclosdesueno.com',
-    locale: 'es_419',  // Spanish for Latin America and International audience
+    title: 'Sleep Calculator | Find Your Ideal Time to Sleep and Wake Up',
+    description: 'Use our Sleep Calculator to discover the best times to go to bed and wake up. Improve your sleep and well-being with personalized sleep timing.',
+    url: 'https://mysleepcalculator.net',
+    locale: 'en_US',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Calculadora de Sueño',
+        alt: 'Sleep Calculator',
       },
     ],
-    siteName: 'Calculadora de Sueño',
+    siteName: 'Sleep Calculator',
     type: 'website',
   },
 
   twitter: {
     // Twitter Card meta for Twitter link previews
     card: 'summary_large_image',
-    title: 'Calculadora de Sueño | Descubre tu Hora Ideal para Dormir y Despertar',
-    description: 'Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar. Mejora tu descanso y bienestar con horarios de sueño personalizados.',
+    title: 'Sleep Calculator | Find Your Ideal Time to Sleep and Wake Up',
+    description: 'Use our Sleep Calculator to discover the best times to go to bed and wake up. Improve your sleep and well-being with personalized sleep timing.',
     images: ['/og-image.png'],
   },
 
   alternates: {
-    canonical: 'https://calculadoraciclosdesueno.com/',
+    canonical: 'https://mysleepcalculator.net/',
     languages: {
-      'es': 'https://calculadoraciclosdesueno.com/',
       'en': 'https://mysleepcalculator.net/',
+      'es': 'https://calculadoraciclosdesueno.com/',
     },
-  },
-
-  other: {
-    inLanguage: 'es',
   },
 };
 
@@ -88,30 +84,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
         {/* Favicon link */}
         <link rel="icon" href="/favicon.ico" />
 
-        {/* Hreflang versions */}
-        <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hreflang="es" />
-        <link rel="alternate" href="https://mysleepcalculator.net/" hreflang="en" />
+        {/* hrefLang versions */}
+        <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="en" />
+        <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hrefLang="es" />
 
-        {/* Hreflang Default */}
-        <link rel="alternate" href="https://mysleepcalculator.net/" hreflang="x-default" />
+        {/* hrefLang Default */}
+        <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="x-default" />
 
         {/* Schema.org structured data for SEO */}
         <Script id="jsonld-webpage" type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Calculadora de Sueño",
-            "alternateName": "Sleep Cycle Calculator",
-            "url": "https://calculadoraciclosdesueno.com",
-            "alternateUrl": "https://mysleepcalculator.net",
-            "description": "Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar.",
-            "image": "https://calculadoraciclosdesueno.com/og-image.png",
-            "inLanguage": "es"
+            "name": "Sleep Calculator",
+            "alternateName": "Calculadora de Sueño",
+            "url": "https://mysleepcalculator.net",
+            "alternateUrl": "https://calculadoraciclosdesueno.com",
+            "description": "Use our Sleep Calculator to discover the best times to go to bed and wake up.",
+            "image": "https://mysleepcalculator.net/og-image.png",
+            "inLanguage": "en"
           })}
         </Script>
 
@@ -119,13 +115,13 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Calculadora de Sueño",
-            "url": "https://calculadoraciclosdesueno.com",
-            "logo": "https://calculadoraciclosdesueno.com/logo.png",
-            "alternateName": "Sleep Cycle Calculator",
+            "name": "Sleep Calculator",
+            "url": "https://mysleepcalculator.net",
+            "logo": "https://mysleepcalculator.net/logo.png",
+            "alternateName": "Calculadora de Sueño",
             "sameAs": [
-              "https://calculadoraciclosdesueno.com",
-              "https://mysleepcalculator.net"
+              "https://mysleepcalculator.net",
+              "https://calculadoraciclosdesueno.com"
             ]
           })}
         </Script>

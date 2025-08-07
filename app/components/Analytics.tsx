@@ -32,7 +32,7 @@ export default function Analytics() {
     <>
       {/* Load the Google Analytics gtag.js library after the page becomes interactive */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-2E5EPY5LC5"
+        src="https://www.googletagmanager.com/gtag/js?id=G-GZ608RZ1BK"
         strategy="lazyOnload"
       />
       {/* Inline script: initialize GA dataLayer and gtag config after interactive */}
@@ -41,7 +41,7 @@ export default function Analytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-2E5EPY5LC5');
+          gtag('config', 'G-GZ608RZ1BK');
         `}
       </Script>
     </>

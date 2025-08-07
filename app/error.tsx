@@ -20,22 +20,22 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
   return (
     <main
       className="main-style"
-      aria-label="Página de error global"
+      aria-label="Global error page"
       role="alert"
     >
 
       {/* Main error headline */}
-      <h1>¡Algo salió mal!</h1>
+      <h1>Something went wrong!</h1>
       {/* Friendly explanation */}
       <p>
-        Ocurrió un error inesperado. Por favor intenta nuevamente o vuelve a la página principal.
+        An unexpected error occurred. Please try again or return to the homepage.
       </p>
       {/* Action buttons: retry or return home */}
       <div style={{ display: 'flex', gap: '1rem' }}>
         {/* Retry button calls the reset handler provided by Next.js */}
         <button
           onClick={() => reset()}
-          aria-label="Reintentar la acción"
+          aria-label="Retry the action"
           style={{
             padding: '1rem 2rem',
             borderRadius: '12px',
@@ -49,13 +49,13 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
             cursor: 'pointer',
           }}
         >
-          Reintentar
+          Retry
         </button>
 
         {/* Link back to homepage */}
         <Link
           href="/"
-          aria-label="Volver a la página principal"
+          aria-label="Return to the homepage"
           style={{
             padding: '1rem 2rem',
             borderRadius: '12px',
@@ -67,7 +67,7 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
             boxShadow: '0 4px 18px 0 #f4d35e33',
           }}
         >
-          ← Volver a la página principal
+          ← Return to homepage
         </Link>
       </div>
     </main>

@@ -8,37 +8,37 @@ import { useRef, useState, Fragment } from 'react';
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Cómo añadir la Calculadora de Sueño a tu página web",
-  "description": "Guía paso a paso para incluir la Calculadora de Sueño gratis en cualquier web o blog.",
-  "inLanguage": "es",
-  "image": "https://calculadoraciclosdesueno.com/og-image.png",
+  "name": "How to Add the Sleep Calculator to Your Website",
+  "description": "Step-by-step guide to embed the free Sleep Calculator on any website or blog.",
+  "inLanguage": "en",
+  "image": "https://mysleepcalculator.net/og-image.png",
   "totalTime": "PT2M",
   "supply": [
-    { "@type": "HowToSupply", "name": "Código HTML del widget" }
+    { "@type": "HowToSupply", "name": "HTML widget code" }
   ],
   "tool": [
-    { "@type": "HowToTool", "name": "Editor de páginas web" }
+    { "@type": "HowToTool", "name": "Website editor" }
   ],
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Copia el código del widget",
-      "text": "Copia el código HTML proporcionado en esta página."
+      "name": "Copy the widget code",
+      "text": "Copy the HTML code provided on this page."
     },
     {
       "@type": "HowToStep",
-      "name": "Pega el código en tu web",
-      "text": "Inserta el código copiado en la sección deseada de tu sitio web o blog."
+      "name": "Paste the code on your site",
+      "text": "Paste the copied code into the desired section of your website or blog."
     },
     {
       "@type": "HowToStep",
-      "name": "Guarda y revisa",
-      "text": "Guarda los cambios y verifica que la calculadora se muestra correctamente en móvil y escritorio."
+      "name": "Save and check",
+      "text": "Save your changes and verify the calculator displays correctly on both mobile and desktop."
     },
     {
       "@type": "HowToStep",
-      "name": "Contacta si tienes dudas",
-      "text": "Si tienes dudas, contacta en info@calculadoraciclosdesueno.com."
+      "name": "Contact if needed",
+      "text": "If you have questions, contact info@mysleepcalculator.net"
     }
   ]
 };
@@ -47,38 +47,38 @@ const howToSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "inLanguage": "es",
+  "inLanguage": "en",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿La calculadora es gratis?",
+      "name": "Is the calculator free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, puedes añadirla libremente a tu web y ofrecerla a tus lectores."
+        "text": "Yes, you can freely embed it on your site and offer it to your visitors."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Funciona en móviles?",
+      "name": "Does it work on mobile?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, el widget es completamente adaptable y se muestra bien en cualquier pantalla."
+        "text": "Yes, the widget is fully responsive and works on all screen sizes."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cómo puedo asegurarme de que es segura para mis usuarios?",
+      "name": "Is it safe for my users?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La calculadora no recopila datos personales ni requiere registro. Es solo una herramienta de ayuda, rápida y segura para el usuario."
+        "text": "The calculator collects no personal data and requires no login. It's a simple, safe tool for users."
       }
     },
     {
       "@type": "Question",
-      "name": "¿En qué tipo de webs puedo incluir la calculadora?",
+      "name": "What kind of websites can include the calculator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En cualquier web, blog, portal educativo, sitio de salud o bienestar."
+        "text": "Any site, blog, educational portal, or health & wellness website can embed it."
       }
     }
   ]
@@ -92,13 +92,12 @@ const faqSchema = {
  * - Handles clipboard interaction and fallback for older browsers
  */
 export default function CalculatorInstructions() {
-  // The HTML code for embedding the calculator widget (shown and copied by user)
   const codeString = `<div style="max-width:410px; width:100%; background:#0c0c0c; border-radius:28px; margin:0 auto;">
   <div style="position:relative; width:100%; padding-top:136.5%;">
     <iframe
-      src="https://calculadoraciclosdesueno.com/widget"
-      title="Calculadora de Sueño"
-      aria-label="Calculadora de Sueño"
+      src="https://mysleepcalculator.net/widget"
+      title="Sleep Calculator"
+      aria-label="Sleep Calculator"
       loading="lazy"
       style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:28px; background:#0c0c0c;"
       allowfullscreen
@@ -106,10 +105,10 @@ export default function CalculatorInstructions() {
   </div>
 </div>
 <p style="text-align:center; font-size:0.98rem; margin-top:0.6em;">
-  <span style="color:#454553;">Calculadora por</span>
-  <a href="https://calculadoraciclosdesueno.com/" target="_blank" rel="noopener noreferrer"
+  <span style="color:#454553;">Calculator by</span>
+  <a href="https://mysleepcalculator.net/" target="_blank" rel="noopener noreferrer"
      style="color:#3578e5; text-decoration:underline; font-weight:500;">
-    calculadoraciclosdesueno.com
+    mysleepcalculator.net
   </a>
 </p>`;
 
@@ -124,10 +123,10 @@ export default function CalculatorInstructions() {
         setCopied(true);
         setTimeout(() => setCopied(false), 1800);
       } catch (error) {
-        window.prompt('Copia manualmente el código:', codeString);
+        window.prompt('Copy the code manually:', codeString);
       }
     } else {
-      window.prompt('Copia manualmente el código:', codeString);
+      window.prompt('Copy the code manually:', codeString);
     }
   };
 
@@ -146,26 +145,26 @@ export default function CalculatorInstructions() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <main className="main-style" aria-label="Instrucciones para añadir la Calculadora de Sueño a cualquir página web">
+      <main className="main-style" aria-label="Instructions for embedding the Sleep Calculator on any website">
 
         {/* Title and Intro */}
         <h1>
-          Cómo añadir la Calculadora de Sueño a tu página web
+          How to Add the Sleep Calculator to Your Website
         </h1>
 
         <p>
-          ¿Quieres incluir nuestra Calculadora de Sueño en tu sitio web, blog o página de salud? Es muy fácil: sigue estos pasos para añadir la calculadora interactiva, totalmente gratis y sin registros.
+          Want to embed our Sleep Calculator on your site, blog, or health page? It’s super easy, just follow these steps to add the interactive tool for free, no signup required.
         </p>
 
         {/* Quick Instructions Heading */}
         <h2>
-          Instrucciones rápidas
+          Quick Instructions
         </h2>
 
         {/* Step 1: Copy the code */}
         <ol>
           <li>
-            Copia el siguiente código y pégalo donde quieras mostrar la calculadora en tu web.
+            Copy the following code and paste it where you want the calculator to appear.
           </li>
         </ol>
 
@@ -173,7 +172,7 @@ export default function CalculatorInstructions() {
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '-2.7rem', marginRight: '0.6rem', zIndex: 1, position: 'relative' }}>
           <button
             onClick={handleCopy}
-            aria-label="Copiar el código HTML para insertar el widget"
+            aria-label="Copy the HTML code to embed the widget"
             style={{
               background: '#f4d35e',
               color: '#181a30',
@@ -187,7 +186,7 @@ export default function CalculatorInstructions() {
               transition: 'background 0.18s'
             }}
           >
-            {copied ? '¡Copiado!' : 'Copiar código'}
+            {copied ? 'Copied!' : 'Copy Code'}
           </button>
         </div>
 
@@ -222,28 +221,28 @@ export default function CalculatorInstructions() {
         {/* Steps 2-4: Paste, check, contact */}
         <ol start={2}>
           <li>
-            Pega el código en tu página, post, sección lateral o donde desees mostrar la calculadora.
-            Si usas WordPress, Blogger u otra plataforma, utiliza un bloque de tipo HTML personalizado o “Custom HTML” para pegar el código.
+            Paste the code into your page, post, sidebar, or wherever you want it to show up.
+            On WordPress, Blogger, etc., use a “Custom HTML” block.
           </li>
           <li>
-            Guarda los cambios y revisa que la calculadora se muestre correctamente, tanto en móvil como en ordenador.
+            Save your changes and make sure the calculator displays correctly on both desktop and mobile.
           </li>
           <li>
-            Si tienes dudas o necesitas ayuda personalizada, contáctanos en:{' '}
+            If you need help, feel free to email us at:{' '}
             <a
-              href="mailto:info@calculadoraciclosdesueno.com"
+              href="mailto:info@mysleepcalculator.net"
               className="email-link"
-              aria-label="Enviar correo a info@calculadoraciclosdesueno.com"
+              aria-label="Send email to info@mysleepcalculator.net"
             >
-              info@calculadoraciclosdesueno.com
+              info@mysleepcalculator.net
             </a>
           </li>
         </ol>
 
         {/* Preview Section */}
-        <h2 style={{ marginTop: '2.4rem' }}>Vista previa</h2>
+        <h2 style={{ marginTop: '2.4rem' }}>Preview</h2>
         <p>
-          Así es como se verá la calculadora en tu página web:
+          This is what the calculator will look like on your site:
         </p>
         <div style={{
           maxWidth: '410px',
@@ -258,9 +257,9 @@ export default function CalculatorInstructions() {
             paddingTop: '136.5%'
           }}>
             <iframe
-              src="https://calculadoraciclosdesueno.com/widget"
-              title="Calculadora de Sueño"
-              aria-label="Calculadora de Sueño"
+              src="https://mysleepcalculator.net/widget"
+              title="Sleep Calculator"
+              aria-label="Sleep Calculator"
               loading="lazy"
               style={{
                 position: 'absolute',
@@ -280,10 +279,10 @@ export default function CalculatorInstructions() {
           fontSize: '0.98rem',
           marginTop: '0.6em'
         }}>
-          <span style={{ color: '#454553' }}>Calculadora por</span>
+          <span style={{ color: '#454553' }}>Calculator by</span>{' '}
           {' '}
           <a
-            href="https://calculadoraciclosdesueno.com/"
+            href="https://mysleepcalculator.net/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -292,44 +291,44 @@ export default function CalculatorInstructions() {
               fontWeight: 500
             }}
           >
-            calculadoraciclosdesueno.com
+            mysleepcalculator.net
           </a>
         </p>
 
         {/* FAQ Section */}
         <h2>
-          Preguntas Frecuentes (FAQ)
+          Frequently Asked Questions (FAQ)
         </h2>
 
         {/* Each FAQ as a details/summary for easy mobile reading */}
         <details className="faq-details">
-          <summary className="faq-summary">¿La calculadora es gratis?</summary>
+          <summary className="faq-summary">Is the calculator free?</summary>
           <p>
-            Sí, puedes añadirla libremente a tu web y ofrecerla a tus lectores.
+            Yes, you can freely embed it on your site and offer it to your visitors.
           </p>
         </details>
         <details className="faq-details">
-          <summary className="faq-summary">¿Funciona en móviles?</summary>
+          <summary className="faq-summary">Does it work on mobile?</summary>
           <p>
-            Sí, el widget es completamente adaptable y se muestra bien en cualquier pantalla.
+            Yes, the widget is fully responsive and works on all screen sizes.
           </p>
         </details>
         <details className="faq-details">
-          <summary className="faq-summary">¿Cómo puedo asegurarme de que es segura para mis usuarios?</summary>
+          <summary className="faq-summary">Is it safe for my users?</summary>
           <p>
-            La calculadora no recopila datos personales ni requiere registro. Es solo una herramienta de ayuda, rápida y segura para el usuario.
+            The calculator collects no personal data and requires no login. It's a simple, safe tool for users.
           </p>
         </details>
         <details className="faq-details">
-          <summary className="faq-summary">¿En qué tipo de webs puedo incluir la calculadora?</summary>
+          <summary className="faq-summary">What kind of websites can include the calculator?</summary>
           <p>
-            En cualquier web, blog, portal educativo, sitio de salud o bienestar.
+            Any site, blog, educational portal, or health & wellness website can embed it.
           </p>
         </details>
 
         {/* Final note */}
         <div className="page-note">
-          ¿Tienes una comunidad, blog o página web de salud y bienestar? Añadir la Calculadora de Sueño es una forma sencilla de ofrecer más valor a tus usuarios. ¡Sin registros ni pagos!
+          Do you run a blog or wellness website? Adding the Sleep Calculator is a simple way to give your users more value, no signups or payments required.
         </div>
       </main>
     </Fragment>

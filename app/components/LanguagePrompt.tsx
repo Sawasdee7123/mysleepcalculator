@@ -25,7 +25,7 @@ const getSiteLangFromHost = (host: string): string => {
 export default function LanguagePrompt() {
   const pathname = usePathname();
   const [showPrompt, setShowPrompt] = useState(false);
-  const [userLang, setUserLang] = useState('en');
+  const [userLang, setUserLang] = useState<'en' | 'es'>('en');
 
   useEffect(() => {
     const siteLang = getSiteLangFromHost(window.location.hostname);
@@ -57,18 +57,28 @@ export default function LanguagePrompt() {
   if (!showPrompt) return null;
 
   const messages = {
-    en: 'Choose your preferred language:',
-    es: 'Elige tu idioma preferido:',
+    en: {
+      title: 'Choose your preferred language:',
+      closeLabel: 'Close language selector',
+      buttonLabel: (lang: string) => `Switch to ${lang}`,
+    },
+    es: {
+      title: 'Elige tu idioma preferido:',
+      closeLabel: 'Cerrar el selector de idioma',
+      buttonLabel: (lang: string) => `Cambiar a ${lang}`,
+    },
   };
 
+  const { title, closeLabel, buttonLabel } = messages[userLang];
+
   return (
-    <div className={styles.overlay}>
+    <div className={styles.overlay} role="dialog" aria-modal="true" aria-label={title}>
       <div className={styles.popup}>
         <div
           className={styles.closeIcon}
           onClick={dismissPrompt}
           role="button"
-          aria-label="Cerrar el selector de idioma"
+          aria-label={closeLabel}
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') dismissPrompt();
@@ -76,16 +86,14 @@ export default function LanguagePrompt() {
         >
           &times;
         </div>
-        <p className={styles.title}>
-          {messages[userLang as keyof typeof messages] || messages.en}
-        </p>
+        <p className={styles.title}>{title}</p>
         <div className={styles.langButtons}>
           {LANGUAGES.map(lang => (
             <button
               key={lang.code}
               onClick={() => handleSelect(lang.code)}
               className={styles.langButton}
-              aria-label={`Cambiar a ${lang.label}`}
+              aria-label={buttonLabel(lang.label)}
             >
               {lang.label}
             </button>

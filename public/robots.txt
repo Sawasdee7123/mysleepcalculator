@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://mysleepcalculator.net
+
 # Sitemaps
-Sitemap: https://calculadoraciclosdesueno.com/sitemap.xml
+Sitemap: https://mysleepcalculator.net/sitemap.xml
