@@ -33,11 +33,19 @@ export default function WidgetPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'transparent', // outer background, keep it dark but flat
-        padding: '2rem',
+        backgroundColor: 'transparent',
+        padding: '2rem 1rem', // ✅ Horizontal spacing on mobile
+        boxSizing: 'border-box',
       }}
     >
-      <WidgetClient />
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '390px', // ✅ Prevent overflow on small screens
+        }}
+      >
+        <WidgetClient />
+      </div>
     </div>
   );
 }

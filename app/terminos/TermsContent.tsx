@@ -10,6 +10,7 @@ const termsPageSchema = {
   "name": "Términos y Condiciones",
   "url": "https://calculadoraciclosdesueno.com/terminos",
   "description": "Lee los términos y condiciones de uso de la Calculadora de Sueño. Conoce tus derechos, responsabilidades y las condiciones para utilizar nuestra herramienta gratuita.",
+  "inLanguage": "es",
   "mainEntity": {
     "@type": "WebSite",
     "name": "Calculadora de Sueño",

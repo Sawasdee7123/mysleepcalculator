@@ -34,6 +34,10 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: 'https://calculadoraciclosdesueno.com/privacidad',
+    languages: {
+      es: 'https://calculadoraciclosdesueno.com/privacidad',
+      en: 'https://mysleepcalculator.net/privacy-policy',
+    },
   },
 };
 

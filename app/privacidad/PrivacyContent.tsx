@@ -11,6 +11,7 @@ const privacyPageSchema = {
   "name": "Política de Privacidad",
   "url": "https://calculadoraciclosdesueno.com/privacidad",
   "description": "Lee la política de privacidad de Calculadora de Sueño para conocer cómo protegemos tus datos personales y tu información mientras usas nuestra herramienta gratuita.",
+  "inLanguage": "es",
   "mainEntity": {
     "@type": "WebSite",
     "name": "Calculadora de Sueño",

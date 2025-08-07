@@ -112,11 +112,16 @@
 
 .mobileMenuButton {
   display: none !important;
+  margin-right: 1rem; /* Add this line */
 }
 
 /* ===== Responsive for mobile (header/nav/menu) ===== */
 
 @media (max-width: 700px) {
+  .mobileMenuButton {
+    margin-right: 1rem;
+  }
+
   .brandContainer {
     margin-bottom: 0; /* remove any bottom margin on mobile */
   }
@@ -204,5 +209,38 @@
     color: #f4d35e;                        /* Highlight in yellow */
     background: rgba(244, 211, 94, 0.10);  /* Optional: subtle background */
     text-decoration: underline;            /* <-- This adds the underline */
+  }
+}
+
+.navWithLang {
+  display: flex;
+  align-items: center; /* Align vertically */
+  justify-content: flex-end;
+  gap: 2rem; /* Smaller gap to tighten alignment */
+  margin-left: auto;
+  height: 100%;
+}
+
+.desktopLanguageSwitcher {
+  display: none;
+}
+
+.mobileLanguageSwitcher {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .desktopLanguageSwitcher {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100%;         /* Important */
+    display: flex;
+    align-items: center;  /* Center it vertically */
+  }
+
+  .mobileLanguageSwitcher {
+    display: none;
   }
 }

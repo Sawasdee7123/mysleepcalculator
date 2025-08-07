@@ -18,7 +18,11 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
   }, [error]);
 
   return (
-    <main className="main-style" aria-label="Página de error global">
+    <main
+      className="main-style"
+      aria-label="Página de error global"
+      role="alert"
+    >
 
       {/* Main error headline */}
       <h1>¡Algo salió mal!</h1>

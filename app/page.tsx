@@ -11,7 +11,16 @@ import SleepCalculator from "./components/SleepCalculator"; // Import the main S
  */
 export default function Home() {
   return (
-    <main className="main-style" aria-label="Página principal de la Calculadora de Sueño" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <main
+      className="main-style"
+      aria-label="Página principal de la Calculadora de Sueño"
+      style={{
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+        }}
+    >
       {/* Main SEO-friendly H1 */}
       <h1 className={styles.title}>
         Calcula tus ciclos de sueño para despertar renovado

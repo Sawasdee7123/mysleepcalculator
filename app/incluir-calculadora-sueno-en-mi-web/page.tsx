@@ -31,6 +31,10 @@ export const metadata = {
 
   alternates: {
     canonical: 'https://calculadoraciclosdesueno.com/incluir-calculadora-sueno-en-mi-web',
+    languages: {
+      es: 'https://calculadoraciclosdesueno.com/incluir-calculadora-sueno-en-mi-web',
+      en: 'https://mysleepcalculator.net/embed-sleep-calculator',
+    },
   },
 };
 

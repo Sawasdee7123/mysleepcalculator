@@ -9,6 +9,28 @@ import SleepCalculator from '../components/SleepCalculator';
  * - Renders the SleepCalculator in "widget" mode with attribution enabled.
  * - Used in the embeddable widget page.
  */
-export default function WidgetClient() {
-  return <SleepCalculator showAttribution />;
+export default function WidgetPage() {
+  return (
+    <div
+      style={{
+        width: '100%',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        padding: '2rem 1rem', // ⬅️ Horizontal padding on mobile
+        boxSizing: 'border-box',
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '410px', // ⬅️ Match the width in the embed code
+        }}
+      >
+        <WidgetClient />
+      </div>
+    </div>
+  );
 }

@@ -34,6 +34,10 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: 'https://calculadoraciclosdesueno.com/como-dormir-mejor',
+    languages: {
+      es: 'https://calculadoraciclosdesueno.com/como-dormir-mejor',
+      en: 'https://mysleepcalculator.net/learn-to-sleep-better',
+    },
   },
 };
 

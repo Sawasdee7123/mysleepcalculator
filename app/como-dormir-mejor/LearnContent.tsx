@@ -14,6 +14,7 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Aprende a Dormir Mejor, Despierta Renovado",
   "description": "Descubre consejos, beneficios y claves científicas para mejorar tu descanso. Aprende cómo funcionan los ciclos de sueño, cuántas horas necesitas según tu edad y cómo usar la calculadora de sueño.",
+  "inLanguage": "es",
   "author": {
     "@type": "Person",
     "name": "Equipo de Calculadora de Sueño"
@@ -38,6 +39,7 @@ const articleSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "inLanguage": "es",
   "mainEntity": [
     {
       "@type": "Question",

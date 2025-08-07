@@ -12,6 +12,7 @@ const contactSchema = {
   "name": "Contacto",
   "url": "https://calculadoraciclosdesueno.com/contacto",
   "about": "Página de contacto del proyecto Calculadora de Sueño",
+  "inLanguage": "es",
   "mainEntity": {
     "@type": "Organization",
     "name": "Calculadora de Sueño",

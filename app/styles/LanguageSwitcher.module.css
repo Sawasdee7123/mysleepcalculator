@@ -1,0 +1,110 @@
+/* ─────────────────────────────── */
+/* 🌐 Language Switcher Component */
+/* ─────────────────────────────── */
+
+.languageSwitcher {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.langButton {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #ffffff;
+  color: #0a1128;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.langButton:hover,
+.langButton:focus {
+  background-color: #f4f4f4;
+  box-shadow: 0 0 0 2px rgba(244, 211, 94, 0.35);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 3000;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  min-width: 100%;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #0a1128;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus {
+  background-color: rgba(244, 211, 94, 0.12);
+}
+
+.mobileFloatingLanguageSwitcher {
+  display: none;
+}
+
+/* ✅ Mobile Styles */
+@media (max-width: 768px) {
+  .dropdown {
+    right: 0;
+    left: auto;
+    min-width: 120px;
+    max-width: calc(100vw - 2rem);
+    font-size: 1rem;
+    overflow-wrap: break-word;
+  }
+
+  .langButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .dropdownItem {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .mobileFloatingLanguageSwitcher {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+  }
+
+  /* Hide desktop version on mobile */
+  .desktopLanguageSwitcher {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100%;         /* Important */
+    display: flex;
+    align-items: center;  /* Center it vertically */
+  }
+}

@@ -15,6 +15,7 @@ const aboutPageSchema = {
   "name": "Sobre Nosotros",
   "url": "https://calculadoraciclosdesueno.com/about",
   "description": "Conoce al equipo detrás de la Calculadora de Sueño. Descubre por qué creamos esta herramienta gratuita y cómo puede ayudarte a mejorar tu descanso.",
+  "inLanguage": "es",
   "mainEntity": {
     "@type": "WebSite",
     "name": "Calculadora de Sueño",

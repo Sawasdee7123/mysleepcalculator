@@ -11,6 +11,9 @@ import AppBody from './AppBody';
 import Header from './components/Header';
 import LayoutShell from './components/LayoutShell';
 
+import LanguagePrompt from './components/LanguagePrompt';
+
+
 // Configure Inter font for all Latin characters and assign CSS variable
 const inter = Inter({
   subsets: ['latin'],
@@ -39,6 +42,7 @@ export const metadata: Metadata = {
     title: 'Calculadora de Sueño | Descubre tu Hora Ideal para Dormir y Despertar',
     description: 'Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar. Mejora tu descanso y bienestar con horarios de sueño personalizados.',
     url: 'https://calculadoraciclosdesueno.com',
+    locale: 'es_419',  // Spanish for Latin America and International audience
     images: [
       {
         url: '/og-image.png',
@@ -61,6 +65,14 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: 'https://calculadoraciclosdesueno.com/',
+    languages: {
+      'es': 'https://calculadoraciclosdesueno.com/',
+      'en': 'https://mysleepcalculator.net/',
+    },
+  },
+
+  other: {
+    inLanguage: 'es',
   },
 };
 
@@ -81,13 +93,22 @@ export default function RootLayout({
         {/* Favicon link */}
         <link rel="icon" href="/favicon.ico" />
 
+        {/* Hreflang versions */}
+        <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hreflang="es" />
+        <link rel="alternate" href="https://mysleepcalculator.net/" hreflang="en" />
+
+        {/* Hreflang Default */}
+        <link rel="alternate" href="https://mysleepcalculator.net/" hreflang="x-default" />
+
         {/* Schema.org structured data for SEO */}
         <Script id="jsonld-webpage" type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Calculadora de Sueño",
+            "alternateName": "Sleep Cycle Calculator",
             "url": "https://calculadoraciclosdesueno.com",
+            "alternateUrl": "https://mysleepcalculator.net",
             "description": "Usa nuestra Calculadora de Ciclos de Sueño para saber a qué hora dormir y despertar.",
             "image": "https://calculadoraciclosdesueno.com/og-image.png",
             "inLanguage": "es"
@@ -100,7 +121,12 @@ export default function RootLayout({
             "@type": "Organization",
             "name": "Calculadora de Sueño",
             "url": "https://calculadoraciclosdesueno.com",
-            "logo": "https://calculadoraciclosdesueno.com/logo.png"
+            "logo": "https://calculadoraciclosdesueno.com/logo.png",
+            "alternateName": "Sleep Cycle Calculator",
+            "sameAs": [
+              "https://calculadoraciclosdesueno.com",
+              "https://mysleepcalculator.net"
+            ]
           })}
         </Script>
 
@@ -116,6 +142,8 @@ export default function RootLayout({
           zIndex: 0,
         }}
       >
+
+        <LanguagePrompt />
 
         {/* AppBody adds analytics, background, and footer (see AppBody.tsx) */}
         <AppBody>

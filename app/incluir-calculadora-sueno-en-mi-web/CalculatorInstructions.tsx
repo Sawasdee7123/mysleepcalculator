@@ -10,6 +10,7 @@ const howToSchema = {
   "@type": "HowTo",
   "name": "Cómo añadir la Calculadora de Sueño a tu página web",
   "description": "Guía paso a paso para incluir la Calculadora de Sueño gratis en cualquier web o blog.",
+  "inLanguage": "es",
   "image": "https://calculadoraciclosdesueno.com/og-image.png",
   "totalTime": "PT2M",
   "supply": [
@@ -46,6 +47,7 @@ const howToSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "inLanguage": "es",
   "mainEntity": [
     {
       "@type": "Question",
