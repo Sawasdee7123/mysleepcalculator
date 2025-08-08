@@ -104,7 +104,6 @@ export default function RootLayout({
             "name": "Sleep Calculator",
             "alternateName": "Calculadora de Sueño",
             "url": "https://mysleepcalculator.net",
-            "alternateUrl": "https://calculadoraciclosdesueno.com",
             "description": "Use our Sleep Calculator to discover the best times to go to bed and wake up.",
             "image": "https://mysleepcalculator.net/og-image.png",
             "inLanguage": "en"
