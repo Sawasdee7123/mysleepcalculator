@@ -1,11 +1,14 @@
 // Import the main content component for the Learn page
 import LearnContent from './LearnContent';
 
+import { alternatesForEnPath } from '../components/hreflang';
+
 // Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
+  alternates: alternatesForEnPath('/embed-sleep-calculator'),
   title: 'Learn to Sleep Better: Tips, Cycles & Complete Guide | Sleep Calculator',
   description: 'Improve your rest with our complete guide: sleep hygiene, sleep cycles, age-based sleep needs, and expert tips for deeper sleep.',
 
@@ -30,14 +33,6 @@ export const metadata: Metadata = {
     title: 'Learn to Sleep Better: Tips, Cycles & Complete Guide | Sleep Calculator',
     description: 'Improve your rest with our complete guide: sleep hygiene, sleep cycles, age-based sleep needs, and expert tips for deeper sleep.',
     images: ['https://mysleepcalculator.net/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://mysleepcalculator.net/learn-to-sleep-better',
-    languages: {
-      en: 'https://mysleepcalculator.net/learn-to-sleep-better',
-      es: 'https://calculadoraciclosdesueno.com/como-dormir-mejor',
-    },
   },
 };
 

@@ -1,9 +1,14 @@
 // Import the main content component for the Terms & Conditions page
 import TermsContent from './TermsContent';
+
+import { alternatesForEnPath } from '../components/hreflang';
+
+// Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Terms page
 export const metadata: Metadata = {
+  alternates: alternatesForEnPath('/terms-and-conditions'),
   title: 'Terms and Conditions | Sleep Calculator',
   description: 'Read the terms and conditions for using the Sleep Calculator. Understand your rights, responsibilities, and the rules for using our free tool.',
 
@@ -28,14 +33,6 @@ export const metadata: Metadata = {
     title: 'Terms and Conditions | Sleep Calculator',
     description: 'Read the terms and conditions for using the Sleep Calculator. Understand your rights, responsibilities, and the rules for using our free tool.',
     images: ['https://mysleepcalculator.net/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://mysleepcalculator.net/terms-and-conditions',
-    languages: {
-      en: 'https://mysleepcalculator.net/terms-and-conditions',
-      es: 'https://calculadoraciclosdesueno.com/terminos',
-    },
   },
 };
 

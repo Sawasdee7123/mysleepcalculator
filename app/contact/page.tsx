@@ -1,11 +1,14 @@
 // Import the main content component for the Contact page
 import ContactContent from './ContactContent';
 
+import { alternatesForEnPath } from '../components/hreflang';
+
 // Import Metadata type from Next.js for static site metadata
 import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
+  alternates: alternatesForEnPath('/learn-to-sleep-better'),
   title: 'Contact Us | Sleep Calculator',
   description: 'Have questions or suggestions? Get in touch with the Sleep Calculator team.',
 
@@ -30,14 +33,6 @@ export const metadata: Metadata = {
     title: 'Contact Us | Sleep Calculator',
     description: 'Have questions or suggestions? Get in touch with the Sleep Calculator team.',
     images: ['https://mysleepcalculator.net/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://mysleepcalculator.net/contact',
-    languages: {
-      en: 'https://mysleepcalculator.net/contact',
-      es: 'https://calculadoraciclosdesueno.com/contacto',
-    },
   },
 };
 

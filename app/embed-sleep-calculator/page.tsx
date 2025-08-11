@@ -1,8 +1,14 @@
 // Import the CalculatorInstructions component, which renders the embed instructions and FAQ
 import CalculatorInstructions from './CalculatorInstructions';
 
+import { alternatesForEnPath } from '../components/hreflang';
+
+// Import Metadata type from Next.js for static site metadata
+import type { Metadata } from 'next';
+
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical link
 export const metadata = {
+  alternates: alternatesForEnPath('/learn-to-sleep-better'),
   title: 'How to Add the Sleep Calculator to Your Website',
   description: 'Quick and easy instructions to embed the free Sleep Calculator on your website or blog using a simple HTML code.',
 
@@ -27,14 +33,6 @@ export const metadata = {
     title: 'How to Add the Sleep Calculator to Your Website',
     description: 'Quick and easy instructions to embed the free Sleep Calculator on your website or blog using a simple HTML code.',
     images: ['https://mysleepcalculator.net/og-image.png'],
-  },
-
-  alternates: {
-    canonical: 'https://mysleepcalculator.net/embed-sleep-calculator',
-    languages: {
-      en: 'https://mysleepcalculator.net/embed-sleep-calculator',
-      es: 'https://calculadoraciclosdesueno.com/incluir-calculadora-sueno-en-mi-web',
-    },
   },
 };
 

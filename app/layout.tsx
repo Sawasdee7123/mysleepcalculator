@@ -8,7 +8,6 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 // Main app-level layout wrappers
 import AppBody from './AppBody';
-import Header from './components/Header';
 import LayoutShell from './components/LayoutShell';
 
 import LanguagePrompt from './components/LanguagePrompt';
@@ -29,6 +28,7 @@ const playfair = Playfair_Display({
 
 // Static metadata for SEO and browser tab
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mysleepcalculator.net'),       // important
   title: 'Sleep Calculator | Find Your Ideal Time to Sleep and Wake Up',
   description: 'Use our Sleep Calculator to discover the best times to go to bed and wake up. Improve your sleep and well-being with personalized sleep timing.',
   icons: {
@@ -63,13 +63,8 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
 
-  alternates: {
-    canonical: 'https://mysleepcalculator.net/',
-    languages: {
-      'en': 'https://mysleepcalculator.net/',
-      'es': 'https://calculadoraciclosdesueno.com/',
-    },
-  },
+  // NOTE: no "alternates" here; pages will set their own hreflang
+
 };
 
 /**
@@ -88,13 +83,6 @@ export default function RootLayout({
       <head>
         {/* Favicon link */}
         <link rel="icon" href="/favicon.ico" />
-
-        {/* hrefLang versions */}
-        <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="en" />
-        <link rel="alternate" href="https://calculadoraciclosdesueno.com/" hrefLang="es" />
-
-        {/* hrefLang Default */}
-        <link rel="alternate" href="https://mysleepcalculator.net/" hrefLang="x-default" />
 
         {/* Schema.org structured data for SEO */}
         <Script id="jsonld-webpage" type="application/ld+json">

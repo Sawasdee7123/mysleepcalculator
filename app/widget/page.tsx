@@ -1,6 +1,9 @@
 // Import the WidgetClient component (the actual calculator widget UI)
 import WidgetClient from './WidgetClient';
 
+// Import Metadata type from Next.js for static site metadata
+import type { Metadata } from 'next';
+
 // Static metadata for SEO and search engine control (prevents indexing, sets canonical, etc.)
 export const metadata = {
   title: 'Sleep Calculator - Widget',
