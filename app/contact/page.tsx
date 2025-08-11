@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical URL for the Learn page
 export const metadata: Metadata = {
-  alternates: alternatesForEnPath('/learn-to-sleep-better'),
+  alternates: alternatesForEnPath('/contact'),
   title: 'Contact Us | Sleep Calculator',
   description: 'Have questions or suggestions? Get in touch with the Sleep Calculator team.',
 

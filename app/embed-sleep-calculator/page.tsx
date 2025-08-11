@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 // Static metadata for SEO, Open Graph, Twitter Card, and canonical link
 export const metadata = {
-  alternates: alternatesForEnPath('/learn-to-sleep-better'),
+  alternates: alternatesForEnPath('/embed-sleep-calculator'),
   title: 'How to Add the Sleep Calculator to Your Website',
   description: 'Quick and easy instructions to embed the free Sleep Calculator on your website or blog using a simple HTML code.',
 
