@@ -1,91 +1,58 @@
 // NO 'use client'
 import { LanguageRouteMap } from './LanguageRouteMap';
 
-const SITE_EN = 'https://mysleepcalculator.net';
-const SITE_ES = 'https://calculadoraciclosdesueno.com';
-const SITE_PL = 'https://kalkulatorsnu.com';
+type Lang = 'en' | 'es' | 'pl';
 
-/**
- * Build <alternates> for a given EN path that exists in LanguageRouteMap.en.
- * Example: alternatesForEnPath('/about')
- */
+const SITE = {
+  en: 'https://mysleepcalculator.net',
+  es: 'https://calculadoraciclosdesueno.com',
+  pl: 'https://kalkulatorsnu.com',
+} as const;
+
+/** Public helpers used by pages */
 export function alternatesForEnPath(enPath: string) {
-  const esPath = LanguageRouteMap.es[enPath];
-  const plPath = LanguageRouteMap.pl?.[enPath]; // optional
-
-  if (!esPath) {
-    throw new Error(`Missing ES mapping for EN path "${enPath}" in LanguageRouteMap.`);
-  }
-
-  const languages: Record<string, string> = {
-    en: `${SITE_EN}${enPath}`,
-    es: `${SITE_ES}${esPath}`,
-    'x-default': `${SITE_EN}${enPath}`,
-  };
-  if (plPath) languages.pl = `${SITE_PL}${plPath}`;
-
-  return {
-    canonical: `${SITE_EN}${enPath}`,
-    languages,
-  };
+  return buildAlternates('en', enPath);
 }
-
-/**
- * Build <alternates> for a given ES path that exists in LanguageRouteMap.es.
- * Example: alternatesForEsPath('/incluir-calculadora-sueno-en-mi-web')
- */
 export function alternatesForEsPath(esPath: string) {
-  // Find EN key that maps to this ES path
-  const enPath = Object.keys(LanguageRouteMap.en).find(
-    (key) => LanguageRouteMap.es[key] === esPath
-  );
+  const enPath = resolveEnKey('es', esPath);
+  return buildAlternates('es', enPath);
+}
+export function alternatesForPlPath(plPath: string) {
+  const enPath = resolveEnKey('pl', plPath);
+  return buildAlternates('pl', enPath);
+}
 
-  if (!enPath) {
-    throw new Error(`Could not resolve EN key for ES path "${esPath}". Check LanguageRouteMap.`);
-  }
+/** Core builder — always emit en, es, pl + a consistent x-default (EN) */
+function buildAlternates(origin: Lang, enPath: string) {
+  const esPath = LanguageRouteMap.es[enPath];
+  const plPath = LanguageRouteMap.pl[enPath];
 
-  const esMapped = LanguageRouteMap.es[enPath];
-  const plPath = LanguageRouteMap.pl?.[enPath];
+  if (!esPath) throw new Error(`Missing ES mapping for EN path "${enPath}".`);
+  if (!plPath) throw new Error(`Missing PL mapping for EN path "${enPath}".`);
 
-  const languages: Record<string, string> = {
-    en: `${SITE_EN}${enPath}`,
-    es: `${SITE_ES}${esMapped}`,
-    'x-default': `${SITE_ES}${esMapped}`,
-  };
-  if (plPath) languages.pl = `${SITE_PL}${plPath}`;
+  const canonicalPath =
+    origin === 'en' ? enPath : origin === 'es' ? esPath : plPath;
 
   return {
-    canonical: `${SITE_ES}${esMapped}`,
-    languages,
+    canonical: `${SITE[origin]}${canonicalPath}`,
+    languages: {
+      en: `${SITE.en}${enPath}`,
+      es: `${SITE.es}${esPath}`,
+      pl: `${SITE.pl}${plPath}`,
+      'x-default': `${SITE.en}${enPath}`, // consistent everywhere
+    },
   };
 }
 
-/**
- * Build <alternates> for a given PL path that exists in LanguageRouteMap.pl.
- * Example: alternatesForPlPath('/naucz-sie-lepiej-spac')
- */
-export function alternatesForPlPath(plPath: string) {
-  // Find EN key that maps to this PL path
-  const enPath = Object.keys(LanguageRouteMap.en).find(
-    (key) => LanguageRouteMap.pl[key] === plPath
+/** Find the EN key (object key) by a localized path */
+function resolveEnKey(lang: Exclude<Lang, 'en'>, localizedPath: string): string {
+  const pair = Object.entries(LanguageRouteMap[lang]).find(
+    ([, loc]) => loc === localizedPath
   );
-
-  if (!enPath) {
-    throw new Error(`Could not resolve EN key for PL path "${plPath}". Check LanguageRouteMap.`);
+  if (!pair) {
+    throw new Error(
+      `Could not resolve EN key for ${lang.toUpperCase()} path "${localizedPath}". Check LanguageRouteMap.`
+    );
   }
-
-  const esPath = LanguageRouteMap.es[enPath];
-  const plMapped = LanguageRouteMap.pl[enPath];
-
-  const languages: Record<string, string> = {
-    en: `${SITE_EN}${enPath}`,
-    es: `${SITE_ES}${esPath}`,
-    pl: `${SITE_PL}${plMapped}`,
-    'x-default': `${SITE_PL}${plMapped}`,
-  };
-
-  return {
-    canonical: `${SITE_PL}${plMapped}`,
-    languages,
-  };
+  return pair[0]; // EN key
 }
