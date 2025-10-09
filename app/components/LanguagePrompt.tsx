@@ -5,42 +5,40 @@ import styles from '../styles/LanguagePrompt.module.css';
 import { usePathname } from 'next/navigation';
 
 const LANGUAGES = [
-  {
-    code: 'en',
-    label: 'English',
-    domain: 'https://mysleepcalculator.net',
-  },
-  {
-    code: 'es',
-    label: 'Español',
-    domain: 'https://calculadoraciclosdesueno.com',
-  },
-];
+  { code: 'en', label: 'English',  domain: 'https://mysleepcalculator.net' },
+  { code: 'es', label: 'Español',  domain: 'https://calculadoraciclosdesueno.com' },
+  { code: 'pl', label: 'Polski',   domain: 'https://kalkulatorsnu.com' },
+] as const;
 
-const getSiteLangFromHost = (host: string): string => {
+type LangCode = typeof LANGUAGES[number]['code'];
+
+const getSiteLangFromHost = (host: string): LangCode => {
   const matched = LANGUAGES.find(lang => host.includes(new URL(lang.domain).hostname));
-  return matched?.code ?? 'en';
+  return (matched?.code ?? 'en');
 };
 
 export default function LanguagePrompt() {
   const pathname = usePathname();
   const [showPrompt, setShowPrompt] = useState(false);
-  const [userLang, setUserLang] = useState<'en' | 'es'>('en');
+  const [userLang, setUserLang] = useState<LangCode>('en');
 
   useEffect(() => {
     const siteLang = getSiteLangFromHost(window.location.hostname);
-    const browserLang = navigator.language.slice(0, 2) as 'en' | 'es';
-    const savedLang = localStorage.getItem('preferredLang');
+
+    const navLang = navigator.language.slice(0, 2).toLowerCase();
+    const browserLang: LangCode = (navLang === 'es' ? 'es' : navLang === 'pl' ? 'pl' : 'en');
+
+    const savedLang = localStorage.getItem('preferredLang') as LangCode | null;
     const manuallySwitched = localStorage.getItem('manualLangSwitch');
 
-    setUserLang(browserLang === 'es' ? 'es' : 'en');
+    setUserLang(browserLang);
 
     if (manuallySwitched) return;
     if (savedLang === siteLang) return;
     if (browserLang !== siteLang) setShowPrompt(true);
   }, []);
 
-  const handleSelect = (langCode: string) => {
+  const handleSelect = (langCode: LangCode) => {
     const lang = LANGUAGES.find(l => l.code === langCode);
     if (!lang) return;
 
@@ -67,7 +65,12 @@ export default function LanguagePrompt() {
       closeLabel: 'Cerrar el selector de idioma',
       buttonLabel: (lang: string) => `Cambiar a ${lang}`,
     },
-  };
+    pl: {
+      title: 'Wybierz preferowany język:',
+      closeLabel: 'Zamknij selektor języka',
+      buttonLabel: (lang: string) => `Przełącz na: ${lang}`,
+    },
+  } as const;
 
   const { title, closeLabel, buttonLabel } = messages[userLang];
 

@@ -7,7 +7,7 @@ import styles from '../styles/LanguageSwitcher.module.css';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
-type LanguageCode = 'en' | 'es';
+type LanguageCode = 'en' | 'es' | 'pl';
 
 const LANGUAGES: {
   code: LanguageCode;
@@ -30,6 +30,13 @@ const LANGUAGES: {
     flag: '/flags/es.svg',
     domain: 'https://calculadoraciclosdesueno.com',
   },
+  {
+    code: 'pl',
+    label: 'PL',
+    name: 'Polski',
+    flag: '/flags/pl.svg',
+    domain: 'https://kalkulatorsnu.com',
+  },
 ];
 
 export default function LanguageSwitcher() {
@@ -41,26 +48,18 @@ export default function LanguageSwitcher() {
   useEffect(() => {
     const host = window.location.hostname;
     if (host.includes('calculadoraciclosdesueno.com')) setCurrentLang('es');
+    else if (host.includes('kalkulatorsnu.com')) setCurrentLang('pl');
     else setCurrentLang('en'); // default to English
   }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        switcherRef.current &&
-        !switcherRef.current.contains(event.target as Node)
-      ) {
+      if (switcherRef.current && !switcherRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
-
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    if (isOpen) document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
   const currentLangData = useMemo(
@@ -74,7 +73,7 @@ export default function LanguageSwitcher() {
 
     const targetLang = LANGUAGES.find(l => l.code === langCode)!;
     const translatedPath = translatePath(currentLang, langCode, pathname) || '/';
-   window.location.href = `${targetLang.domain}${translatedPath}`;
+    window.location.href = `${targetLang.domain}${translatedPath}`;
   };
 
   return (

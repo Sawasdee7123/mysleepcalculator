@@ -1,4 +1,4 @@
-type LanguageCode = 'en' | 'es';
+type LanguageCode = 'en' | 'es' | 'pl';
 
 export const LanguageRouteMap: Record<LanguageCode, Record<string, string>> = {
   en: {
@@ -19,6 +19,15 @@ export const LanguageRouteMap: Record<LanguageCode, Record<string, string>> = {
     '/privacy-policy': '/privacidad',
     '/terms-and-conditions': '/terminos',
   },
+  pl: {
+    '/': '/',
+    '/about': '/about', // change to '/o-nas' only if your folder is renamed
+    '/contact': '/kontakt',
+    '/learn-to-sleep-better': '/naucz-sie-lepiej-spac',
+    '/embed-sleep-calculator': '/dodaj-kalkulator-snu',
+    '/privacy-policy': '/polityka-prywatnosci',
+    '/terms-and-conditions': '/regulamin',
+  },
 };
 
 // Helper to translate paths between languages
@@ -29,7 +38,7 @@ export function translatePath(
 ): string {
   if (fromLang === toLang) return currentPath;
 
-  // If current language is not English, try to reverse-map to English first
+  // Reverse-map to EN first if needed
   let englishPath = currentPath;
 
   if (fromLang !== 'en') {
@@ -39,6 +48,6 @@ export function translatePath(
     englishPath = match?.[0] || '/';
   }
 
-  // Now use that English path to get the translation
+  // Then map EN -> target language
   return LanguageRouteMap[toLang][englishPath] || '/';
 }
