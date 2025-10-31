@@ -113,6 +113,16 @@ export default function RootLayout({
           })}
         </Script>
 
+        {/* Google AdSense verification code (place exactly here) */}
+        <Script
+          id="adsense-script"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2545431483160187"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        {/* End AdSense verification code */}
+
       </head>
 
       <body
