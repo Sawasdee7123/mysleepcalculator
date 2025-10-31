@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 // Import the Header and Footer components for site layout
 import Header from './Header';
 import Footer from './Footer';
-import CookieConsentBanner from './CookieConsentBanner';
+// import CookieConsentBanner from './CookieConsentBanner';  // Cookies Consent Form Commented out, using Google AdSense one
 
 /**
  * LayoutShell component
@@ -28,7 +28,10 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
     <>
       {/* Only show Header & CookieConsentBanner if not on the widget route */}
       {!hideHeader && <Header />}
-      {!hideCookieBanner && <CookieConsentBanner />}
+
+      {/* CookieConsentBanner disabled (handled by Google AdSense CMP) */}
+      {/* {!hideCookieBanner && <CookieConsentBanner />} */}
+
       {/* Render the main page content */}
       {children}
     </>
