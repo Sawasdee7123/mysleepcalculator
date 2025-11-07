@@ -87,7 +87,7 @@ export default function RootLayout({
         {/* Google AdSense verification (static script tag for crawler) */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2545431483160187"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308769554508651"
           crossOrigin="anonymous"
         ></script>
 
