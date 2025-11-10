@@ -56,6 +56,13 @@ export default function PrivacyContent() {
           We do not request or store personally identifiable information. However, like most websites, we may collect anonymous data such as your IP address, browser type, language, and the pages you visit solely for statistical purposes and service improvement.
         </p>
 
+        <p>
+          <strong>Chrome Extension:</strong> When using our official Sleep Calculator Chrome Extension,
+          no personal or identifiable data is collected, stored, or transmitted. The extension only loads
+          the calculator interface from our official websites and may store a non-personal language
+          preference locally within the browser for user convenience. This data never leaves your device.
+        </p>
+
         <h2>2. Cookies and Similar Technologies</h2>
         <p>
           We use our own cookies and third-party cookies (e.g., Google Analytics, Google AdSense) to analyze traffic, display personalized advertising, and enhance your user experience.
