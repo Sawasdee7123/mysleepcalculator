@@ -17,12 +17,40 @@ const getSiteLangFromHost = (host: string): LangCode => {
   return (matched?.code ?? 'en');
 };
 
+/** ---------- NEW: suppression helper ---------- */
+function shouldSuppressPrompt(pathname: string): boolean {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const isIframe = window.self !== window.top;                  // embedded (extension or other)
+    const fromChromeExt = params.get('utm_source') === 'chrome_ext';
+    const noLangPrompt = params.has('no_lang_prompt');            // manual kill switch
+    const isWidget = pathname.startsWith('/widget');              // your widget route
+    return isIframe || fromChromeExt || noLangPrompt || isWidget;
+  } catch {
+    return false;
+  }
+}
+/** --------------------------------------------- */
+
 export default function LanguagePrompt() {
   const pathname = usePathname();
+
+  /** ---------- NEW: short-circuit early ---------- */
+  if (typeof window !== 'undefined' && shouldSuppressPrompt(pathname)) {
+    return null;
+  }
+  /** --------------------------------------------- */
+
   const [showPrompt, setShowPrompt] = useState(false);
   const [userLang, setUserLang] = useState<LangCode>('en');
 
   useEffect(() => {
+    // If something external changes and the guard should apply later, double-check once.
+    if (shouldSuppressPrompt(pathname)) {
+      setShowPrompt(false);
+      return;
+    }
+
     const siteLang = getSiteLangFromHost(window.location.hostname);
 
     const navLang = navigator.language.slice(0, 2).toLowerCase();
@@ -36,7 +64,7 @@ export default function LanguagePrompt() {
     if (manuallySwitched) return;
     if (savedLang === siteLang) return;
     if (browserLang !== siteLang) setShowPrompt(true);
-  }, []);
+  }, [pathname]);
 
   const handleSelect = (langCode: LangCode) => {
     const lang = LANGUAGES.find(l => l.code === langCode);
